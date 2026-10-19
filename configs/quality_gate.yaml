@@ -1,0 +1,24 @@
+# Quality Gate Configuration for Fundus Image Screening
+# Safety invariant: Reject blurred, too dark, artefact-ridden, or too-little-retina images
+# An ungradable image must NEVER produce a reassuring "No DR" result.
+
+blur:
+  method: "laplacian_variance"
+  min_variance: 80.0 # Below this is considered clinically ungradable blur
+  gaussian_kernel: 3
+
+brightness:
+  min_mean: 25.0    # Underexposed / opaque media
+  max_mean: 220.0   # Severe overexposure / flash artefact
+  min_contrast_std: 15.0 # Low dynamic range
+
+retina_field:
+  min_retina_area_ratio: 0.55 # Retinal disc area / bounding circle
+  background_threshold: 15    # Pixel intensity considered black margin
+
+artefacts:
+  max_saturated_fraction: 0.15 # Max allowable saturated white pixels (flash glare)
+
+rejection_code: "UNGRA_RECAPTURE"
+rejection_recommendation: "RECAPTURE"
+rejection_description: "Fundus image quality insufficient for automated grading. Please recapture with proper focus and illumination."

@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Screening Report - Q-RetinaScreen{% endblock %}
+
+{% block content %}
+<div class="report-container">
+    <!-- Top Action Bar -->
+    <div class="report-action-bar">
+        <div>
+            <a href="{{ url_for('index') }}" class="btn btn-outline">← Screen Another Patient</a>
+            <span class="report-id-tag">Encryption Ref: <code>{{ report.encrypted_file_ref }}</code></span>
+        </div>
+        <div class="header-badges">
+            <span class="head-active-badge">Active Head: {{ report.active_head | upper }}</span>
+            <span class="latency-tag">Latency: {{ report.latency_ms }} ms</span>
+        </div>
+    </div>
+
+    <!-- Main Verdict Banner -->
+    {% if not report.is_gradable %}
+    <div class="verdict-banner banner-danger glass-panel">
+        <div class="verdict-icon">⛔</div>
+        <div class="verdict-body">
+            <div class="verdict-status">QUALITY GATE: UNGRADABLE IMAGE</div>
+            <h2>Mandatory Recapture Required</h2>
+            <p class="verdict-desc">{{ report.action_plan }}</p>
+            <div class="alert-safety">
+                <strong>CRITICAL SAFETY RULE:</strong> An ungradable image can NEVER produce a reassuring "No DR" diagnosis. Re-imaging is required before automated triage can proceed.
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="verdict-banner banner-{{ 'referable' if report.is_referable else 'normal' }} glass-panel">
+        <div class="verdict-icon">{{ '🚨' if report.is_referable else '✅' }}</div>
+        <div class="verdict-body">
+            <div class="verdict-status">
+                DIABETIC RETINOPATHY SCREENING RESULT: 
+                <span class="badge-referable">{{ 'REFERABLE DR (Grade ≥ 2)' if report.is_referable else 'NON-REFERABLE (Grade < 2)' }}</span>
+            </div>
+            <h2>{{ report.grade_name }} (Grade {{ report.predicted_grade }})</h2>
+            <p class="confidence-summary">
+                Confidence: <strong>{{ (report.confidence * 100) | round(1) }}%</strong> | 
+                Urgency Tier: <strong>{{ report.urgency_tier }}</strong>
+            </p>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Two-Column Clinical Content -->
+    <div class="report-grid">
+        <!-- Visual Assessment (Original & Grad-CAM) -->
+        <div class="panel visual-panel glass-panel">
+            <div class="panel-header">
+                <h3>Visual Explainability Assessment</h3>
+                <p>Side-by-side fundus photograph and CNN backbone Grad-CAM heatmap</p>
+            </div>
+
+            <div class="image-comparison-container">
+                <div class="img-box">
+                    <h4>Preprocessed Fundus Photo</h4>
+                    <div class="img-frame">
+                        <img src="data:image/png;base64,{{ report.original_image_base64 }}" alt="Fundus Photo" id="origImg">
+                    </div>
+                </div>
+
+                <div class="img-box">
+                    <h4>Grad-CAM Saliency Overlay</h4>
+                    <div class="img-frame">
+                        {% if report.gradcam_overlay_base64 %}
+                        <img src="data:image/png;base64,{{ report.gradcam_overlay_base64 }}" alt="Grad-CAM Overlay" id="gradCamImg">
+                        {% else %}
+                        <div class="placeholder-box">Heatmap bypassed (Ungradable image)</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            {% if report.gradcam_overlay_base64 %}
+            <div class="explainability-notice">
+                <p><strong>Explainability Note:</strong> Grad-CAM highlights coarse convolutional visual features in the classical EfficientNet-B0 backbone. It does not represent qubit state evolution or microscopic lesion boundaries.</p>
+                <div class="anatomical-status {{ 'status-ok' if report.anatomical_check_passed else 'status-flagged' }}">
+                    Anatomical Check: <strong>{{ 'Passed (Heatmap peak is within retinal disc)' if report.anatomical_check_passed else 'FLAGGED (Heatmap peak falls outside retinal field)' }}</strong>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Clinical Recommendation & Metrics -->
+        <div class="panel decision-panel glass-panel">
+            <div class="panel-header">
+                <h3>Clinical Triage & Action Plan</h3>
+                <p>Automated decision support mapped from grade, confidence, and quality</p>
+            </div>
+
+            <div class="recommendation-card rec-{{ report.recommendation | lower }}">
+                <div class="rec-header">
+                    <span class="rec-label">Primary Recommendation</span>
+                    <span class="rec-value">{{ report.recommendation | replace('_', ' ') }}</span>
+                </div>
+                <div class="rec-plan">
+                    {{ report.action_plan }}
+                </div>
+            </div>
+
+            {% if report.requires_human_review %}
+            <div class="human-review-box">
+                <h4>⚠️ Specialist Human Review Required:</h4>
+                <ul>
+                    {% for reason in report.human_review_reasons %}
+                    <li>{{ reason }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <!-- 5-Class Probability Distribution -->
+            {% if report.probabilities %}
+            <div class="probabilities-section">
+                <h4>5-Class Severity Probability Distribution:</h4>
+                <div class="prob-list">
+                    {% for class_name, prob in report.probabilities.items() %}
+                    <div class="prob-row">
+                        <span class="prob-name">{{ class_name }}</span>
+                        <div class="prob-bar-container">
+                            <div class="prob-bar-fill" style="width: {{ (prob * 100) | round(1) }}%;"></div>
+                        </div>
+                        <span class="prob-val">{{ (prob * 100) | round(1) }}%</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Quality Gate Metrics -->
+            <div class="quality-metrics-box">
+                <h4>Quality Gate Verification Metrics:</h4>
+                <div class="metrics-grid">
+                    {% for key, val in report.quality_metrics.items() %}
+                    <div class="metric-item">
+                        <span class="metric-key">{{ key | replace('_', ' ') | title }}:</span>
+                        <span class="metric-val"><code>{{ val }}</code></span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

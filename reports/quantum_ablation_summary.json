@@ -1,0 +1,82 @@
+{
+  "summary_table": [
+    {
+      "head": "classical",
+      "seeds": 5,
+      "classical_params": 6405,
+      "quantum_params": 0,
+      "total_params": 6405,
+      "latency_ms_per_image": 0.0,
+      "accuracy_mean": 0.38,
+      "accuracy_std": 0.04,
+      "macro_f1_mean": 0.2756,
+      "macro_f1_std": 0.0341,
+      "quadratic_weighted_kappa_mean": 0.3209,
+      "quadratic_weighted_kappa_std": 0.0631,
+      "moderate_dr_recall_mean": 1.0,
+      "moderate_dr_recall_std": 0.0,
+      "referable_sensitivity_mean": 1.0,
+      "referable_sensitivity_std": 0.0,
+      "referable_specificity_mean": 0.76,
+      "referable_specificity_std": 0.0327,
+      "referable_auc_mean": 0.9413,
+      "referable_auc_std": 0.0274
+    },
+    {
+      "head": "matched_dense",
+      "seeds": 5,
+      "classical_params": 5149,
+      "quantum_params": 0,
+      "total_params": 5149,
+      "latency_ms_per_image": 0.03,
+      "accuracy_mean": 0.3,
+      "accuracy_std": 0.114,
+      "macro_f1_mean": 0.1448,
+      "macro_f1_std": 0.0822,
+      "quadratic_weighted_kappa_mean": 0.2702,
+      "quadratic_weighted_kappa_std": 0.2761,
+      "moderate_dr_recall_mean": 0.2,
+      "moderate_dr_recall_std": 0.4,
+      "referable_sensitivity_mean": 0.96,
+      "referable_sensitivity_std": 0.08,
+      "referable_specificity_mean": 0.76,
+      "referable_specificity_std": 0.0327,
+      "referable_auc_mean": 0.9413,
+      "referable_auc_std": 0.0459
+    },
+    {
+      "head": "hybrid_quantum",
+      "seeds": 5,
+      "classical_params": 5149,
+      "quantum_params": 12,
+      "total_params": 5161,
+      "latency_ms_per_image": 9.77,
+      "accuracy_mean": 0.2,
+      "accuracy_std": 0.114,
+      "macro_f1_mean": 0.0917,
+      "macro_f1_std": 0.0485,
+      "quadratic_weighted_kappa_mean": 0.035,
+      "quadratic_weighted_kappa_std": 0.2725,
+      "moderate_dr_recall_mean": 0.2,
+      "moderate_dr_recall_std": 0.4,
+      "referable_sensitivity_mean": 0.92,
+      "referable_sensitivity_std": 0.098,
+      "referable_specificity_mean": 0.7333,
+      "referable_specificity_std": 0.1116,
+      "referable_auc_mean": 0.8827,
+      "referable_auc_std": 0.0487
+    }
+  ],
+  "statistical_tests": {
+    "hybrid_vs_matched_dense": {
+      "qwk_wilcoxon_p_value": 0.4375,
+      "f1_wilcoxon_p_value": 0.4375,
+      "statistically_significant": false
+    }
+  },
+  "runtimes_per_image": {
+    "classical": 0.0,
+    "matched_dense": 0.03,
+    "hybrid_quantum": 9.77
+  }
+}

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}Screening Dashboard - Q-RetinaScreen{% endblock %}
+
+{% block content %}
+<div class="dashboard-grid">
+    <!-- Left Column: Acquisition & Parameters -->
+    <div class="panel upload-panel glass-panel">
+        <div class="panel-header">
+            <h2>1. Fundus Image Acquisition</h2>
+            <p>Upload standard 45° or 50° digital colour fundus photograph</p>
+        </div>
+
+        <form id="screeningForm" method="POST" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+            <!-- Drop Zone -->
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" name="file" accept="image/*" class="file-input-hidden">
+                <div class="drop-zone-content">
+                    <span class="upload-icon">📸</span>
+                    <h3>Drag & Drop Fundus Image Here</h3>
+                    <p>or click to browse local files (JPG, PNG)</p>
+                    <div id="filePreviewContainer" class="file-preview-container hidden">
+                        <img id="previewImage" alt="Preview">
+                        <span id="fileNameLabel" class="file-name-label"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Selection -->
+            <div class="section-group">
+                <label class="section-label">2. Neural Architecture Head</label>
+                <div class="head-selector">
+                    <label class="head-card">
+                        <input type="radio" name="head" value="hybrid_quantum" checked id="headQuantum">
+                        <div class="head-card-content">
+                            <div class="head-badge">PennyLane VQC</div>
+                            <h4>Hybrid Quantum Head</h4>
+                            <p>Linear 1280→4 + 4-Qubit VQC (L=3, CNOT Chain) + Linear 4→5</p>
+                            <span class="param-tag">5,149 classical + 12 quantum params</span>
+                        </div>
+                    </label>
+
+                    <label class="head-card">
+                        <input type="radio" name="head" value="matched_dense" id="headMatched">
+                        <div class="head-card-content">
+                            <div class="head-badge control-badge">Mandatory Control</div>
+                            <h4>Matched Dense Head</h4>
+                            <p>Linear 1280→4 + Tanh + Linear 4→5 (Isolates quantum expressivity)</p>
+                            <span class="param-tag">5,149 classical params</span>
+                        </div>
+                    </label>
+
+                    <label class="head-card">
+                        <input type="radio" name="head" value="classical" id="headClassical">
+                        <div class="head-card-content">
+                            <div class="head-badge standard-badge">Baseline</div>
+                            <h4>Classical Head</h4>
+                            <p>Dropout (0.2) + Linear 1280→5 direct classification</p>
+                            <span class="param-tag">6,405 classical params</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitScreenBtn">
+                <span class="btn-text">Execute Quality Gate & Screening</span>
+                <span class="spinner hidden" id="spinner"></span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Right Column: Quick Demo Samples & Clinical Pipeline Specs -->
+    <div class="panel info-panel glass-panel">
+        <div class="panel-header">
+            <h2>Demo Sample Verification</h2>
+            <p>Select pre-validated synthetic fundus images for instant end-to-end testing</p>
+        </div>
+
+        <div class="sample-grid">
+            {% for s in sample_images %}
+            <div class="sample-card" onclick="selectSample('{{ s.filename }}')">
+                <div class="sample-name">{{ s.label | replace('_', ' ') | title }}</div>
+                <div class="sample-file"><code>{{ s.filename }}</code></div>
+                <button type="button" class="btn btn-sm btn-outline">Load Sample</button>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="pipeline-spec-box">
+            <h3>Automated Pipeline Invariants:</h3>
+            <ol>
+                <li><strong>Quality Gate:</strong> Blur (Laplacian var < 80), Brightness, & Retina Area checks. Rejects ungradable images immediately. <em>An ungradable image never outputs "No DR".</em></li>
+                <li><strong>Backbone:</strong> EfficientNet-B0 (ImageNet weights, strictly frozen).</li>
+                <li><strong>Explainability:</strong> Grad-CAM highlights backbone conv features + verifies heatmap peak is inside retina.</li>
+                <li><strong>Decision Support:</strong> Automated referral mapping (Routine / Prompt / Urgent / Recapture).</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

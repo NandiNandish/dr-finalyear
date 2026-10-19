@@ -1,0 +1,25 @@
+# Quantum Hyperparameters Configuration
+quantum_circuit:
+  backend: "default.qubit"
+  num_qubits: 4
+  variational_layers: 3 # L searched in {2, 3, 4}; default 3
+  diff_method: "parameter-shift" # parameter-shift | backprop
+  entangling_layout: "circular" # circular CNOT chain: (0,1), (1,2), (2,3), (3,0)
+  rotation_gate: "RY"
+  embedding_gate: "RY"
+  embedding_scaling: 1.57079632679 # pi / 2
+  observable: "PauliZ"
+  shots: null # Analytic statevector expectation
+
+noisy_simulation:
+  enabled: false
+  backend: "default.mixed"
+  noise_type: "depolarizing"
+  error_probability: 0.01
+
+classical_projections:
+  input_dim: 1280
+  reduced_dim: 4
+  output_dim: 5
+  w1_bias: true
+  w2_bias: true

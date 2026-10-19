@@ -1,0 +1,65 @@
+# Master Configuration for Quantum-Enhanced Diabetic Retinopathy Screening System
+
+project:
+  name: "dr-quantum-screening"
+  version: "1.0.0"
+  description: "Screening AID for Diabetic Retinopathy using AI and Quantum-Enhanced Deep Learning"
+  device_disclaimer: "Screening recommendation aid only, not a diagnostic device."
+
+paths:
+  data_dir: "data"
+  manifest_path: "data/manifests/demo_manifest.csv"
+  external_manifest_path: "data/manifests/external_test.csv"
+  cache_dir: "data/cached_features"
+  checkpoints_dir: "checkpoints"
+  reports_dir: "reports"
+  uploads_dir: "app/uploads_encrypted"
+
+data:
+  image_size: 224 # Configurable up to 299
+  keep_circular_fov: true
+  clahe_clip_limit: 2.0
+  clahe_tile_grid: [8, 8]
+  patient_disjoint: true
+  oversample_minority_train: true
+  random_seed: 42
+
+quality_gate:
+  min_laplacian_var: 80.0     # Reject images with Laplacian variance < threshold (blur)
+  min_mean_brightness: 25.0   # Reject too dark fundus photos
+  max_mean_brightness: 220.0  # Reject overexposed / flash-blown photos
+  min_retina_area_ratio: 0.55 # Reject partial / clipped retina views
+  strict_rejection: true
+
+model:
+  backbone: "efficientnet_b0" # efficientnet_b0 | resnet50 | xception
+  backbone_weights: "IMAGENET1K_V1"
+  freeze_backbone: true
+  feature_dim: 1280
+  num_classes: 5
+  active_head: "hybrid_quantum" # classical | hybrid_quantum | matched_dense
+  dropout: 0.2
+
+quantum:
+  backend: "default.qubit" # exact simulator
+  num_qubits: 4
+  variational_layers: 3 # L searched in {2, 3, 4}, default 3
+  diff_method: "parameter-shift" # parameter-shift | backprop
+  noise_model: null # null | depolarizing
+  depolarizing_prob: 0.01
+
+training:
+  batch_size: 16
+  num_epochs: 15
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  loss: "focal" # focal | weighted_ce
+  focal_gamma: 2.0
+  lr_scheduler: "cosine" # cosine | step | plateau
+  early_stopping_patience: 5
+  seeds: [42, 43, 44, 45, 46] # Mandatory >= 5 seeds
+
+evaluation:
+  referable_threshold_grade: 2 # Moderate or worse (2, 3, 4)
+  confidence_flag_threshold: 0.60
+  calibrate_probabilities: true # Temperature scaling on validation set

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Sign In - Q-RetinaScreen{% endblock %}
+
+{% block content %}
+<div class="login-wrapper">
+    <div class="login-card glass-panel">
+        <div class="login-header">
+            <h2>Clinical Portal Sign In</h2>
+            <p>Access role-restricted diabetic retinopathy tele-screening</p>
+        </div>
+
+        <form method="POST" action="{{ url_for('login') }}" class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="e.g. clinician, technician, admin" required autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="loginSubmitBtn">
+                Authenticate & Enter
+            </button>
+        </form>
+
+        <div class="role-hint-box">
+            <h4>Demo Role Credentials:</h4>
+            <ul>
+                <li><strong>Clinician:</strong> <code>clinician</code> / <code>doctor123</code> (Full triage & Grad-CAM)</li>
+                <li><strong>Technician:</strong> <code>technician</code> / <code>tech123</code> (Upload & quality check)</li>
+                <li><strong>Admin:</strong> <code>admin</code> / <code>admin123</code> (System audit & logs)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
