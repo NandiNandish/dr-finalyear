@@ -1,0 +1,6 @@
+
+# Model checkpoints and cached feature tensors (too large for GitHub)
+*.pt
+*.pth
+checkpoints/
+data/cached_features/
