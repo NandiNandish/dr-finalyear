@@ -1,18 +1,28 @@
 {% extends "base.html" %}
 
-{% block title %}Screening Report - Q-RetinaScreen{% endblock %}
+{% block title %}Screening Report - {{ report.patient_id }} - Q-RetinaScreen{% endblock %}
 
 {% block content %}
 <div class="report-container">
     <!-- Top Action Bar -->
-    <div class="report-action-bar">
-        <div>
-            <a href="{{ url_for('index') }}" class="btn btn-outline">← Screen Another Patient</a>
-            <span class="report-id-tag">Encryption Ref: <code>{{ report.encrypted_file_ref }}</code></span>
+    <div class="report-action-bar glass-panel">
+        <div class="action-left">
+            <a href="{{ url_for('index') }}" class="btn btn-outline btn-sm">← Screen Another Patient</a>
+            <span class="report-id-tag">Patient: <strong>{{ report.patient_id }}</strong> ({{ report.exam_eye }})</span>
+            <span class="enc-tag">Encrypted: <code>{{ report.encrypted_file_ref }}</code></span>
         </div>
-        <div class="header-badges">
-            <span class="head-active-badge">Active Head: {{ report.active_head | upper }}</span>
-            <span class="latency-tag">Latency: {{ report.latency_ms }} ms</span>
+        <div class="action-right">
+            <button type="button" class="btn btn-outline btn-sm" id="copyEhrBtn" title="Copy formatted EMR progress note to clipboard">
+                📋 Copy Clinical Note
+            </button>
+            <a href="{{ url_for('print_report', report_id=report.report_id) }}" target="_blank" class="btn btn-primary btn-sm btn-download-pdf">
+                🖨️ Download Medical PDF / Print
+            </a>
+            <a href="{{ url_for('download_report_json', report_id=report.report_id) }}" class="btn btn-outline btn-sm">
+                💾 Export JSON (DICOM/HL7)
+            </a>
+            <span class="head-active-badge">Head: {{ report.active_head | upper }}</span>
+            <span class="latency-tag">{{ report.latency_ms }} ms</span>
         </div>
     </div>
 
@@ -25,7 +35,7 @@
             <h2>Mandatory Recapture Required</h2>
             <p class="verdict-desc">{{ report.action_plan }}</p>
             <div class="alert-safety">
-                <strong>CRITICAL SAFETY RULE:</strong> An ungradable image can NEVER produce a reassuring "No DR" diagnosis. Re-imaging is required before automated triage can proceed.
+                <strong>CRITICAL SAFETY INVARIANT:</strong> An ungradable image can NEVER produce a reassuring "No DR" diagnosis. Recapture is required before automated triage can proceed.
             </div>
         </div>
     </div>
@@ -40,9 +50,128 @@
             <h2>{{ report.grade_name }} (Grade {{ report.predicted_grade }})</h2>
             <p class="confidence-summary">
                 Confidence: <strong>{{ (report.confidence * 100) | round(1) }}%</strong> | 
-                Urgency Tier: <strong>{{ report.urgency_tier }}</strong>
+                Urgency Tier: <strong>{{ report.urgency_tier | replace('_', ' ') }}</strong>
             </p>
         </div>
+    </div>
+    {% endif %}
+
+    <!-- Eye Health & Multi-Condition Analytics Banner -->
+    {% if report.eye_health %}
+    <div class="eye-health-banner glass-panel">
+        <div class="eye-health-header">
+            <div class="score-ring-container">
+                <div class="score-circle">
+                    <span class="score-num">{{ report.eye_health.overall_score }}</span>
+                    <span class="score-denom">/100</span>
+                </div>
+                <div class="score-details">
+                    <div class="score-title">Comprehensive Ocular Health Score</div>
+                    <div class="score-badge status-{{ report.eye_health.overall_status | lower | replace(' ', '-') }}">
+                        {{ report.eye_health.overall_status }} Status
+                    </div>
+                </div>
+            </div>
+            <div class="eye-health-desc">
+                Multi-axis quantitative assessment of microvasculature, macular integrity, optic nerve head, and ocular media transparency.
+            </div>
+        </div>
+
+        <div class="biomarkers-card-grid">
+            <!-- 1. Vasculature -->
+            <div class="biomarker-card">
+                <div class="b-card-header">
+                    <span class="b-icon">🩸</span>
+                    <span class="b-name">Retinal Vasculature</span>
+                    <span class="b-pill pill-{{ report.eye_health.hypertensive_risk | lower }}">{{ report.eye_health.hypertensive_risk }} Risk</span>
+                </div>
+                <div class="b-metrics">
+                    <div class="b-metric-item">
+                        <span class="b-label">Vessel Density:</span>
+                        <span class="b-val">{{ report.eye_health.vessel_density_pct }}%</span>
+                    </div>
+                    <div class="b-metric-item">
+                        <span class="b-label">Tortuosity Index:</span>
+                        <span class="b-val">{{ report.eye_health.vessel_tortuosity_index }}</span>
+                    </div>
+                </div>
+                <p class="b-text">{{ report.eye_health.vascular_summary }}</p>
+            </div>
+
+            <!-- 2. Macular Integrity & DME -->
+            <div class="biomarker-card">
+                <div class="b-card-header">
+                    <span class="b-icon">🎯</span>
+                    <span class="b-name">Macular & DME Status</span>
+                    <span class="b-pill pill-{{ 'danger' if 'High' in report.eye_health.macular_edema_risk else ('warn' if 'Possible' in report.eye_health.macular_edema_risk else 'ok') }}">
+                        {{ report.eye_health.macular_edema_risk }}
+                    </span>
+                </div>
+                <div class="b-metrics">
+                    <div class="b-metric-item">
+                        <span class="b-label">Integrity Score:</span>
+                        <span class="b-val">{{ report.eye_health.macular_integrity_score }} / 25</span>
+                    </div>
+                </div>
+                <p class="b-text">{{ report.eye_health.macular_summary }}</p>
+            </div>
+
+            <!-- 3. Optic Nerve / Glaucoma -->
+            <div class="biomarker-card">
+                <div class="b-card-header">
+                    <span class="b-icon">👁️</span>
+                    <span class="b-name">Optic Nerve & Glaucoma</span>
+                    <span class="b-pill pill-{{ 'danger' if 'High' in report.eye_health.glaucoma_susceptibility else ('warn' if 'Borderline' in report.eye_health.glaucoma_susceptibility else 'ok') }}">
+                        {{ report.eye_health.glaucoma_susceptibility }}
+                    </span>
+                </div>
+                <div class="b-metrics">
+                    <div class="b-metric-item">
+                        <span class="b-label">Estimated CDR:</span>
+                        <span class="b-val">~{{ report.eye_health.estimated_cdr }}</span>
+                    </div>
+                    <div class="b-metric-item">
+                        <span class="b-label">Optic Score:</span>
+                        <span class="b-val">{{ report.eye_health.optic_nerve_score }} / 25</span>
+                    </div>
+                </div>
+                <p class="b-text">{{ report.eye_health.optic_nerve_summary }}</p>
+            </div>
+
+            <!-- 4. Media Clarity / Cataract -->
+            <div class="biomarker-card">
+                <div class="b-card-header">
+                    <span class="b-icon">🔍</span>
+                    <span class="b-name">Media Clarity & Lens</span>
+                    <span class="b-pill pill-{{ 'ok' if 'Clear' in report.eye_health.cataract_haze_index else ('warn' if 'Mild' in report.eye_health.cataract_haze_index else 'danger') }}">
+                        {{ report.eye_health.cataract_haze_index }}
+                    </span>
+                </div>
+                <div class="b-metrics">
+                    <div class="b-metric-item">
+                        <span class="b-label">Clarity Score:</span>
+                        <span class="b-val">{{ report.eye_health.media_clarity_score }} / 25</span>
+                    </div>
+                </div>
+                <p class="b-text">{{ report.eye_health.media_summary }}</p>
+            </div>
+        </div>
+
+        <!-- Preventive Guidelines -->
+        {% if report.eye_health.preventive_recommendations %}
+        <div class="preventive-box">
+            <h4>💡 Personalized Preventive Eye Health & Care Plan</h4>
+            <div class="preventive-grid">
+                {% for rec in report.eye_health.preventive_recommendations %}
+                <div class="preventive-card">
+                    <span class="p-category">{{ rec.category }}</span>
+                    <h5>{{ rec.title }}</h5>
+                    <p>{{ rec.detail }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
     </div>
     {% endif %}
 
@@ -51,21 +180,36 @@
         <!-- Visual Assessment (Original & Grad-CAM) -->
         <div class="panel visual-panel glass-panel">
             <div class="panel-header">
-                <h3>Visual Explainability Assessment</h3>
+                <h3>Visual Photographic & Saliency Assessment</h3>
                 <p>Side-by-side fundus photograph and CNN backbone Grad-CAM heatmap</p>
             </div>
 
-            <div class="image-comparison-container">
-                <div class="img-box">
+            <!-- Interactive Viewer Controls -->
+            {% if report.gradcam_overlay_base64 %}
+            <div class="viewer-toolbar">
+                <div class="viewer-modes">
+                    <button type="button" class="mode-btn active" id="btnModeSplit" onclick="setViewerMode('split')">Side-by-Side</button>
+                    <button type="button" class="mode-btn" id="btnModeBlend" onclick="setViewerMode('blend')">Interactive Blend</button>
+                    <button type="button" class="mode-btn" id="btnModeRedfree" onclick="setViewerMode('redfree')">Red-Free (Green)</button>
+                </div>
+                <div class="slider-group" id="opacitySliderContainer">
+                    <label for="heatmapOpacitySlider">Heatmap: <span id="opacityDisplay">85%</span></label>
+                    <input type="range" id="heatmapOpacitySlider" min="0" max="100" value="85" class="range-slider" oninput="updateHeatmapOpacity(this.value)">
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="image-comparison-container" id="imageComparisonContainer">
+                <div class="img-box" id="origImgBox">
                     <h4>Preprocessed Fundus Photo</h4>
-                    <div class="img-frame">
+                    <div class="img-frame" id="origFrame">
                         <img src="data:image/png;base64,{{ report.original_image_base64 }}" alt="Fundus Photo" id="origImg">
                     </div>
                 </div>
 
-                <div class="img-box">
+                <div class="img-box" id="camImgBox">
                     <h4>Grad-CAM Saliency Overlay</h4>
-                    <div class="img-frame">
+                    <div class="img-frame" id="camFrame">
                         {% if report.gradcam_overlay_base64 %}
                         <img src="data:image/png;base64,{{ report.gradcam_overlay_base64 }}" alt="Grad-CAM Overlay" id="gradCamImg">
                         {% else %}
@@ -145,5 +289,27 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Hidden payload for 1-click clinical note copying -->
+<div id="hiddenEhrPayload" style="display: none;">
+[DIABETIC RETINOPATHY & EYE HEALTH SCREENING PROGRESS NOTE]
+Patient ID: {{ report.patient_id }}
+Eye Examined: {{ report.exam_eye }}
+Timestamp: {{ report.timestamp }}
+Quality Gate: {{ 'GRADABLE (PASSED)' if report.is_gradable else 'UNGRADABLE (MANDATORY RECAPTURE)' }}
+Primary Finding: {{ report.grade_name }} (Grade {{ report.predicted_grade if report.predicted_grade is not none else 'N/A' }})
+Model Confidence: {{ (report.confidence * 100) | round(1) }}%
+Triage Referral: {{ report.urgency_tier }}
+{% if report.eye_health %}
+Ocular Health Score: {{ report.eye_health.overall_score }}/100 ({{ report.eye_health.overall_status }})
+Biomarkers:
+- Vasculature: {{ report.eye_health.hypertensive_risk }} Risk (Density: {{ report.eye_health.vessel_density_pct }}%, Tortuosity: {{ report.eye_health.vessel_tortuosity_index }})
+- Macular Edema: {{ report.eye_health.macular_edema_risk }}
+- Optic Nerve / Glaucoma: Estimated CDR ~{{ report.eye_health.estimated_cdr }} ({{ report.eye_health.glaucoma_susceptibility }})
+- Media Transparency: {{ report.eye_health.cataract_haze_index }}
+{% endif %}
+Action Plan: {{ report.action_plan }}
+Regulatory Notice: Tele-screening recommendation aid under clinical supervision.
 </div>
 {% endblock %}

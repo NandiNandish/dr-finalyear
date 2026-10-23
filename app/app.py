@@ -14,6 +14,7 @@ import sys
 from pathlib import Path
 import time
 import uuid
+import json
 from flask import (
     Flask,
     render_template,
@@ -23,6 +24,7 @@ from flask import (
     redirect,
     url_for,
     flash,
+    make_response,
 )
 
 # Ensure project root directory is in Python path
@@ -49,6 +51,9 @@ storage = EncryptedStorage(
     storage_dir="app/uploads_encrypted",
     key_path="app/storage_key.key",
 )
+
+# In-memory clinical report cache for PDF rendering & JSON export
+REPORTS_CACHE = {}
 
 # Check for trained checkpoint
 def get_best_available_checkpoint(head: str = "hybrid_quantum") -> str:
@@ -108,15 +113,37 @@ def logout():
 @login_required
 def index():
     user = session.get("user", {})
-    # Find available demo samples for quick 1-click test
     demo_dir = Path("data/demo")
     sample_images = []
-    if demo_dir.exists():
-        for p in list(demo_dir.glob("*.png"))[:8]:
+    
+    # Priority curated samples to showcase all pipeline paths
+    curated_keys = [
+        ("eyepacs_demo_PAT_TR_000_left.png", "Standard Clinical Retinal Photo (EyePACS)", "CLINICAL", "badge-clinical"),
+        ("messidor_demo_EXT_PAT_000_left.png", "External Multi-Centre Validation (Messidor)", "EXTERNAL", "badge-external"),
+        ("ungradable_blur_test.png", "Quality Gate Safety: Motion Defocus Blur", "SAFETY REJECT", "badge-reject"),
+        ("ungradable_dark_test.png", "Quality Gate Safety: Severe Underexposure", "SAFETY REJECT", "badge-reject"),
+        ("ungradable_partial_retina_test.png", "Quality Gate Safety: Off-Center Clipped FOV", "SAFETY REJECT", "badge-reject"),
+        ("eyepacs_demo_PAT_TE_002_left.png", "Holdout Diabetic Cohort Examination", "CLINICAL", "badge-clinical"),
+    ]
+    for fn, label, tag, badge_cls in curated_keys:
+        if (demo_dir / fn).exists():
             sample_images.append({
-                "filename": p.name,
-                "label": p.stem.replace("eyepacs_demo_", "").replace("messidor_demo_", ""),
+                "filename": fn,
+                "label": label,
+                "tag": tag,
+                "badge_class": badge_cls,
             })
+    
+    # Fallback to general demo samples if fewer than 6
+    if len(sample_images) < 4 and demo_dir.exists():
+        for p in list(demo_dir.glob("*.png"))[:6]:
+            if not any(s["filename"] == p.name for s in sample_images):
+                sample_images.append({
+                    "filename": p.name,
+                    "label": p.stem.replace("eyepacs_demo_", "").replace("messidor_demo_", "").replace("_", " ").title(),
+                    "tag": "DEMO",
+                    "badge_class": "badge-clinical",
+                })
 
     return render_template("index.html", user=user, sample_images=sample_images)
 
@@ -163,12 +190,24 @@ def predict():
 
     latency_ms = round((time.time() - t_start) * 1000.0, 1)
 
+    patient_id = request.form.get("patient_id", "").strip() or f"PAT-{uid[:6].upper()}"
+    exam_eye = request.form.get("exam_eye", "OD (Right Eye)")
+
     response_data = report.to_dict()
     response_data["latency_ms"] = latency_ms
     response_data["active_head"] = head
     response_data["original_image_base64"] = report.original_image_base64
     response_data["gradcam_overlay_base64"] = report.gradcam_overlay_base64
     response_data["encrypted_file_ref"] = enc_filename + ".enc"
+    response_data["report_id"] = uid
+    response_data["patient_id"] = patient_id
+    response_data["exam_eye"] = exam_eye
+    response_data["timestamp"] = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
+
+    # Cache report for download/print
+    REPORTS_CACHE[uid] = response_data
+    REPORTS_CACHE["latest"] = response_data
+    session["last_report_id"] = uid
 
     # If requested via JSON API
     if request.is_json or request.headers.get("Accept") == "application/json":
@@ -176,6 +215,35 @@ def predict():
 
     # Render HTML report template for interactive UI
     return render_template("report.html", report=response_data, user=session.get("user", {}))
+
+
+@app.route("/report/<report_id>/json", methods=["GET"])
+@login_required
+def download_report_json(report_id):
+    report_data = REPORTS_CACHE.get(report_id) or REPORTS_CACHE.get(session.get("last_report_id"))
+    if not report_data:
+        flash("Report not found or session expired. Please re-run screening.", "error")
+        return redirect(url_for("index"))
+
+    export_data = {k: v for k, v in report_data.items() if not k.endswith("_base64")}
+    export_data["has_gradcam"] = bool(report_data.get("gradcam_overlay_base64"))
+
+    json_str = json.dumps(export_data, indent=2)
+    response = make_response(json_str)
+    response.headers["Content-Type"] = "application/json"
+    response.headers["Content-Disposition"] = f"attachment; filename=screening_report_{report_id}.json"
+    return response
+
+
+@app.route("/report/<report_id>/print", methods=["GET"])
+@login_required
+def print_report(report_id):
+    report_data = REPORTS_CACHE.get(report_id) or REPORTS_CACHE.get(session.get("last_report_id"))
+    if not report_data:
+        flash("Report not found or session expired. Please re-run screening.", "error")
+        return redirect(url_for("index"))
+
+    return render_template("clinical_pdf_report.html", report=report_data, user=session.get("user", {}))
 
 
 @app.route("/health", methods=["GET"])

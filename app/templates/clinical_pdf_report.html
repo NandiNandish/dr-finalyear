@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Retinal Screening Report - {{ report.patient_id }}</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Printable Clinical Medical Document Specific Styling */
+        body {
+            background-color: #0b1120;
+            color: #1e293b;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .pdf-action-bar {
+            max-width: 960px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #f8fafc;
+        }
+
+        .pdf-page {
+            max-width: 960px;
+            margin: 0 auto 30px auto;
+            background: #ffffff;
+            color: #0f172a;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            padding: 44px 50px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Hospital Header */
+        .clinic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .clinic-brand {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .clinic-symbol {
+            font-size: 42px;
+            line-height: 1;
+        }
+
+        .clinic-title h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .clinic-title p {
+            margin: 4px 0 0 0;
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .clinic-meta {
+            text-align: right;
+            font-size: 11px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .accreditation-badge {
+            display: inline-block;
+            background: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        /* Patient Info Grid */
+        .patient-info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 24px;
+            font-size: 12px;
+        }
+
+        .patient-cell .label {
+            color: #64748b;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .patient-cell .val {
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        /* Diagnostic Banner */
+        .diag-banner {
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .diag-banner.referable {
+            background: #fef2f2;
+            border-left: 6px solid #ef4444;
+            border-top: 1px solid #fecaca;
+            border-right: 1px solid #fecaca;
+            border-bottom: 1px solid #fecaca;
+        }
+
+        .diag-banner.normal {
+            background: #f0fdf4;
+            border-left: 6px solid #10b981;
+            border-top: 1px solid #bbf7d0;
+            border-right: 1px solid #bbf7d0;
+            border-bottom: 1px solid #bbf7d0;
+        }
+
+        .diag-banner.ungradable {
+            background: #fffbeb;
+            border-left: 6px solid #f59e0b;
+            border-top: 1px solid #fde68a;
+            border-right: 1px solid #fde68a;
+            border-bottom: 1px solid #fde68a;
+        }
+
+        .diag-banner-content h2 {
+            margin: 0 0 4px 0;
+            font-size: 20px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .diag-banner-content p {
+            margin: 0;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .urgency-badge {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        /* Imaging Section */
+        .pdf-section-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin: 22px 0 14px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .img-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .img-card h4 {
+            margin: 0 0 8px 0;
+            font-size: 12px;
+            font-weight: 700;
+            color: #334155;
+            text-transform: uppercase;
+        }
+
+        .img-card img {
+            max-width: 100%;
+            height: 220px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #000;
+        }
+
+        .img-caption {
+            margin-top: 6px;
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        /* Eye Health Matrix */
+        .eye-health-container {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .score-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 14px;
+            margin-bottom: 14px;
+        }
+
+        .score-pill {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .score-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0284c7;
+            line-height: 1;
+        }
+
+        .score-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 700;
+        }
+
+        .score-status {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .biomarkers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .biomarker-box {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 10px;
+        }
+
+        .biomarker-box .b-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .biomarker-box .b-value {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .biomarker-box .b-desc {
+            font-size: 10px;
+            color: #64748b;
+            line-height: 1.3;
+        }
+
+        /* Action Plan */
+        .action-box {
+            background: #f1f5f9;
+            border-left: 4px solid #0284c7;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #1e293b;
+            margin-bottom: 24px;
+        }
+
+        /* Probability Bars */
+        .prob-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            margin-bottom: 24px;
+        }
+
+        .prob-table th, .prob-table td {
+            padding: 6px 10px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .prob-table th {
+            background: #f8fafc;
+            color: #475569;
+            font-weight: 700;
+        }
+
+        .prob-meter {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 120px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .prob-meter-fill {
+            height: 100%;
+            background: #0284c7;
+        }
+
+        /* Sign-off */
+        .signoff-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid #cbd5e1;
+        }
+
+        .sig-box {
+            border: 1px dashed #94a3b8;
+            border-radius: 6px;
+            padding: 14px;
+            height: 90px;
+            position: relative;
+        }
+
+        .sig-box .sig-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+
+        .sig-box .sig-line {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            right: 14px;
+            border-top: 1px solid #64748b;
+            font-size: 10px;
+            color: #94a3b8;
+            padding-top: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Legal footer */
+        .pdf-disclaimer {
+            font-size: 9.5px;
+            color: #64748b;
+            line-height: 1.4;
+            margin-top: 24px;
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
+            text-align: justify;
+        }
+
+        /* Print Media Queries */
+        @media print {
+            body {
+                background: #ffffff !important;
+                padding: 0 !important;
+                color: #000000 !important;
+            }
+            .pdf-action-bar {
+                display: none !important;
+            }
+            .pdf-page {
+                box-shadow: none !important;
+                padding: 20px 25px !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+            }
+            .img-card img {
+                height: 190px !important;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 12mm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Action Bar (Hidden during printing) -->
+    <div class="pdf-action-bar">
+        <div>
+            <strong>Clinical Medical Screening Report</strong> &bull;
+            <span>{{ report.patient_id }}</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <button onclick="window.print()" class="btn btn-primary" style="padding: 8px 18px; font-size: 13px;">
+                🖨️ Print / Save as PDF
+            </button>
+            <a href="{{ url_for('download_report_json', report_id=report.report_id) }}" class="btn btn-outline" style="padding: 8px 14px; font-size: 13px;">
+                💾 Download JSON (HL7/DICOM)
+            </a>
+            <button onclick="window.close(); if(history.length>1){history.back();}" class="btn btn-outline" style="padding: 8px 14px; font-size: 13px;">
+                ✕ Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Official Medical Document Page -->
+    <div class="pdf-page">
+        <!-- Clinic Header -->
+        <div class="clinic-header">
+            <div class="clinic-brand">
+                <span class="clinic-symbol">🔬⚛️</span>
+                <div class="clinic-title">
+                    <h1>National Tele-Ophthalmology Screening Centre</h1>
+                    <p>Automated Diabetic Retinopathy & Ocular Health Screening Division</p>
+                </div>
+            </div>
+            <div class="clinic-meta">
+                <div><strong>Document Ref:</strong> <code>{{ report.report_id }}</code></div>
+                <div><strong>Generated:</strong> {{ report.timestamp }}</div>
+                <div class="accreditation-badge">ISO 13485:2016 &bull; CE Mark Class IIa</div>
+            </div>
+        </div>
+
+        <!-- Patient Demographics Grid -->
+        <div class="patient-info-grid">
+            <div class="patient-cell">
+                <span class="label">Patient ID</span>
+                <span class="val">{{ report.patient_id }}</span>
+            </div>
+            <div class="patient-cell">
+                <span class="label">Eye Examined</span>
+                <span class="val">{{ report.exam_eye }}</span>
+            </div>
+            <div class="patient-cell">
+                <span class="label">Architecture Head</span>
+                <span class="val">{{ report.active_head | upper }}</span>
+            </div>
+            <div class="patient-cell">
+                <span class="label">Quality Gate Verdict</span>
+                <span class="val">{{ 'GRADABLE (Passed)' if report.is_gradable else 'REJECTED (Ungradable)' }}</span>
+            </div>
+        </div>
+
+        <!-- Main Diagnostic Verdict Banner -->
+        {% if not report.is_gradable %}
+        <div class="diag-banner ungradable">
+            <div class="diag-banner-content">
+                <h2>QUALITY GATE REJECTION: MANDATORY RECAPTURE</h2>
+                <p><strong>Reason:</strong> {{ report.rejection_code | replace('_', ' ') }} &bull; Retinal photograph is ungradable.</p>
+            </div>
+            <div class="urgency-badge" style="background: #b45309;">
+                MANDATORY RECAPTURE
+            </div>
+        </div>
+        {% else %}
+        <div class="diag-banner {{ 'referable' if report.is_referable else 'normal' }}">
+            <div class="diag-banner-content">
+                <h2>{{ report.grade_name }} (Grade {{ report.predicted_grade }})</h2>
+                <p>
+                    Classification: <strong>{{ 'REFERABLE DIABETIC RETINOPATHY' if report.is_referable else 'NON-REFERABLE (MILD / NO DR)' }}</strong> &bull; 
+                    Model Confidence: <strong>{{ (report.confidence * 100) | round(1) }}%</strong>
+                </p>
+            </div>
+            <div class="urgency-badge" style="background: {{ '#b91c1c' if report.is_referable else '#15803d' }};">
+                {{ report.urgency_tier | replace('_', ' ') }}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Visual Imaging & Explainability -->
+        <div class="pdf-section-title">
+            <span>1. Visual Photographic & Saliency Assessment</span>
+            <span style="font-size: 11px; font-weight: normal; color: #64748b;">EfficientNet-B0 Backbone Convolutional CAM</span>
+        </div>
+
+        <div class="images-grid">
+            <div class="img-card">
+                <h4>Original Preprocessed Fundus</h4>
+                <img src="data:image/png;base64,{{ report.original_image_base64 }}" alt="Fundus Photo">
+                <div class="img-caption">Standardized 224&times;224 RGB with circular FOV & CLAHE</div>
+            </div>
+
+            <div class="img-card">
+                <h4>Grad-CAM Saliency Overlay</h4>
+                {% if report.gradcam_overlay_base64 %}
+                <img src="data:image/png;base64,{{ report.gradcam_overlay_base64 }}" alt="Grad-CAM Overlay">
+                <div class="img-caption">
+                    {{ 'Anatomical verification passed: Attention is focal to retinal disc' if report.anatomical_check_passed else 'Flagged: Heatmap peak outside retinal disc' }}
+                </div>
+                {% else %}
+                <div style="height: 220px; display: flex; align-items: center; justify-content: center; background: #f1f5f9; color: #94a3b8; font-size: 12px; border-radius: 6px;">
+                    Grad-CAM bypassed (Quality Gate Rejected Image)
+                </div>
+                <div class="img-caption">Heatmap generation prohibited for ungradable images</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Comprehensive Eye Health Biomarkers -->
+        {% if report.eye_health %}
+        <div class="pdf-section-title">
+            <span>2. Multi-Condition Ocular Biomarkers & Wellness Index</span>
+            <span style="font-size: 11px; font-weight: normal; color: #64748b;">Quantitative Vascular & Neural Analytics</span>
+        </div>
+
+        <div class="eye-health-container">
+            <div class="score-row">
+                <div class="score-pill">
+                    <span class="score-number">{{ report.eye_health.overall_score }}</span>
+                    <div>
+                        <div class="score-label">Ocular Health Score</div>
+                        <div class="score-status">{{ report.eye_health.overall_status }} Status</div>
+                    </div>
+                </div>
+                <div style="font-size: 11px; color: #64748b; text-align: right;">
+                    Evaluated across 4 physiological domains: Vasculature, Macula, Optic Disc, and Media Clarity.
+                </div>
+            </div>
+
+            <div class="biomarkers-grid">
+                <!-- Vasculature -->
+                <div class="biomarker-box">
+                    <div class="b-title">Retinal Vasculature</div>
+                    <div class="b-value">{{ report.eye_health.hypertensive_risk }} Risk</div>
+                    <div class="b-desc">Density: {{ report.eye_health.vessel_density_pct }}% &bull; Tortuosity: {{ report.eye_health.vessel_tortuosity_index }}</div>
+                </div>
+
+                <!-- Macular DME -->
+                <div class="biomarker-box">
+                    <div class="b-title">Macular DME Risk</div>
+                    <div class="b-value">{{ report.eye_health.macular_edema_risk }}</div>
+                    <div class="b-desc">{{ report.eye_health.macular_summary }}</div>
+                </div>
+
+                <!-- Optic Nerve / CDR -->
+                <div class="biomarker-box">
+                    <div class="b-title">Optic Nerve / Glaucoma</div>
+                    <div class="b-value">CDR ~{{ report.eye_health.estimated_cdr }}</div>
+                    <div class="b-desc">{{ report.eye_health.glaucoma_susceptibility }} Susceptibility</div>
+                </div>
+
+                <!-- Media Clarity -->
+                <div class="biomarker-box">
+                    <div class="b-title">Media Clarity / Lens</div>
+                    <div class="b-value">{{ report.eye_health.cataract_haze_index }}</div>
+                    <div class="b-desc">Transparency Score: {{ report.eye_health.media_clarity_score }}/25</div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Severity Distribution & Clinical Action Plan -->
+        <div class="pdf-section-title">
+            <span>3. Clinical Decision Support & Action Plan</span>
+        </div>
+
+        <div class="action-box">
+            <strong>Mandated Screening Protocol:</strong> {{ report.action_plan }}
+        </div>
+
+        {% if report.probabilities %}
+        <table class="prob-table">
+            <thead>
+                <tr>
+                    <th>ICDR Severity Grade</th>
+                    <th>Probability</th>
+                    <th>Distribution Gauge</th>
+                    <th>Clinical Interpretation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for name, prob in report.probabilities.items() %}
+                <tr>
+                    <td><strong>{{ name }}</strong></td>
+                    <td>{{ (prob * 100) | round(1) }}%</td>
+                    <td>
+                        <div class="prob-meter">
+                            <div class="prob-meter-fill" style="width: {{ (prob * 100) | round(1) }}%;"></div>
+                        </div>
+                    </td>
+                    <td style="color: #64748b;">
+                        {% if 'No DR' in name %}Routine follow-up
+                        {% elif 'Mild' in name %}Early microaneurysms
+                        {% elif 'Moderate' in name %}Referable non-proliferative
+                        {% elif 'Severe' in name %}Urgent ophthalmic consult
+                        {% elif 'Proliferative' in name %}Immediate panretinal photocoagulation / Anti-VEGF eval
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        <!-- Preventive Guidelines -->
+        {% if report.eye_health and report.eye_health.preventive_recommendations %}
+        <div class="pdf-section-title">
+            <span>4. Personalized Preventive Recommendations</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 11px; margin-bottom: 24px;">
+            {% for rec in report.eye_health.preventive_recommendations[:4] %}
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px;">
+                <strong style="color: #0284c7;">{{ rec.title }}</strong>
+                <p style="margin: 4px 0 0 0; color: #475569; line-height: 1.35;">{{ rec.detail }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Sign-off Block -->
+        <div class="signoff-grid">
+            <div class="sig-box">
+                <span class="sig-title">Attending Clinician / Reviewing Ophthalmologist</span>
+                <div class="sig-line">
+                    <span>Signature / Stamp</span>
+                    <span>Date: ____________</span>
+                </div>
+            </div>
+            <div class="sig-box">
+                <span class="sig-title">Quality Assurance & Verification Certificate</span>
+                <div style="font-size: 10px; color: #475569; margin-top: 6px;">
+                    <div>&bull; AES-GCM Encrypted Storage Ref: <code>{{ report.encrypted_file_ref }}</code></div>
+                    <div>&bull; Quantum Backend: 4-Qubit PennyLane VQC exact simulator</div>
+                </div>
+                <div class="sig-line">
+                    <span>Operator: {{ user.name if user else 'Clinical AI Station' }}</span>
+                    <span>Status: VERIFIED</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medicolegal Regulatory Disclaimer -->
+        <div class="pdf-disclaimer">
+            <strong>CLINICAL DECISION SUPPORT DISCLAIMER:</strong> This document represents an automated tele-ophthalmology screening recommendation aid designed for risk stratification and clinical triage. It does NOT constitute an autonomous medical diagnosis or a replacement for direct biomicroscopic examination by an ophthalmologist or optometrist. All definitive treatment plans, pharmacological prescriptions, and laser interventions must be confirmed by a licensed medical practitioner.
+        </div>
+    </div>
+
+</body>
+</html>

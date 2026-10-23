@@ -1,0 +1,75 @@
+{
+  "accuracy": 0.1818,
+  "macro_f1": 0.09,
+  "quadratic_weighted_kappa": -0.0302,
+  "moderate_dr_recall": 0.0,
+  "class_recalls": {
+    "recall_grade_0_no_dr": 0.3333,
+    "recall_grade_1_mild": 0.25,
+    "recall_grade_2_moderate": 0.0,
+    "recall_grade_3_severe": 0.0,
+    "recall_grade_4_pdr": 0.0
+  },
+  "referable_dr": {
+    "sensitivity": 0.5,
+    "specificity": 0.2857,
+    "auc": 0.3929,
+    "threshold": 0.5116,
+    "tp": 2,
+    "fp": 5,
+    "tn": 2,
+    "fn": 2
+  },
+  "confusion_matrix": [
+    [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "calibration": {
+    "temperature": 1.1554,
+    "validation_chosen_threshold": 0.5116
+  },
+  "meta": {
+    "head_architecture": "hybrid_quantum",
+    "split_evaluated": "test",
+    "sample_count": 11,
+    "checkpoint": "checkpoints/checkpoint_hybrid_quantum_seed42.pt"
+  },
+  "quality_gate": {
+    "total_images_checked": 11,
+    "gradable_images": 4,
+    "imageability_rate": 0.3636
+  }
+}

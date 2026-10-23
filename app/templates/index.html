@@ -12,16 +12,39 @@
         </div>
 
         <form id="screeningForm" method="POST" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+            <!-- Patient Demographics & Eye Selection -->
+            <div class="demographics-grid">
+                <div class="form-group">
+                    <label for="patientIdInput" class="input-label">Patient Reference ID (Optional)</label>
+                    <input type="text" id="patientIdInput" name="patient_id" placeholder="e.g. PAT-2026-0891" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="examEyeSelect" class="input-label">Eye Examined</label>
+                    <select id="examEyeSelect" name="exam_eye" class="form-select">
+                        <option value="OD (Right Eye)" selected>OD (Right Eye)</option>
+                        <option value="OS (Left Eye)">OS (Left Eye)</option>
+                        <option value="OU (Bilateral / Field Test)">OU (Bilateral / Field Test)</option>
+                    </select>
+                </div>
+            </div>
+
             <!-- Drop Zone -->
             <div class="drop-zone" id="dropZone">
                 <input type="file" id="fileInput" name="file" accept="image/*" class="file-input-hidden">
                 <div class="drop-zone-content">
                     <span class="upload-icon">📸</span>
-                    <h3>Drag & Drop Fundus Image Here</h3>
-                    <p>or click to browse local files (JPG, PNG)</p>
+                    <h3>Drag & Drop Fundus Photograph Here</h3>
+                    <p>or click to browse local files (JPG, PNG, TIFF)</p>
+                    
                     <div id="filePreviewContainer" class="file-preview-container hidden">
-                        <img id="previewImage" alt="Preview">
-                        <span id="fileNameLabel" class="file-name-label"></span>
+                        <div class="preview-card">
+                            <img id="previewImage" alt="Preview">
+                            <div class="preview-meta">
+                                <span id="fileNameLabel" class="file-name-label"></span>
+                                <span id="fileDimLabel" class="file-dim-label"></span>
+                                <button type="button" id="clearFileBtn" class="btn btn-sm btn-outline clear-btn">✕ Remove</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,6 +85,23 @@
                 </div>
             </div>
 
+            <!-- Multi-Stage Processing Visualizer -->
+            <div id="processingSteps" class="processing-steps-container hidden">
+                <div class="processing-header">
+                    <span class="processing-spinner"></span>
+                    <span id="processingStatusText">Screening pipeline executing...</span>
+                </div>
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progressBarFill" style="width: 15%;"></div>
+                </div>
+                <ul class="steps-list">
+                    <li id="step1" class="step active">Step 1: Automated Quality Gate (Blur, Illumination, FOV)</li>
+                    <li id="step2" class="step">Step 2: Backbone Convolutional Embedding (EfficientNet-B0)</li>
+                    <li id="step3" class="step">Step 3: Neural Head Forward Pass & Quantum Circuit Simulation</li>
+                    <li id="step4" class="step">Step 4: Grad-CAM Explainability & Eye Health Analytics</li>
+                </ul>
+            </div>
+
             <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitScreenBtn">
                 <span class="btn-text">Execute Quality Gate & Screening</span>
                 <span class="spinner hidden" id="spinner"></span>
@@ -72,16 +112,19 @@
     <!-- Right Column: Quick Demo Samples & Clinical Pipeline Specs -->
     <div class="panel info-panel glass-panel">
         <div class="panel-header">
-            <h2>Demo Sample Verification</h2>
-            <p>Select pre-validated synthetic fundus images for instant end-to-end testing</p>
+            <h2>Demo Cohort Verification</h2>
+            <p>1-click verification across normal, diabetic, and quality-rejected cohorts</p>
         </div>
 
         <div class="sample-grid">
             {% for s in sample_images %}
             <div class="sample-card" onclick="selectSample('{{ s.filename }}')">
-                <div class="sample-name">{{ s.label | replace('_', ' ') | title }}</div>
+                <div class="sample-card-top">
+                    <span class="sample-badge {{ s.badge_class }}">{{ s.tag }}</span>
+                    <span class="sample-arrow">→</span>
+                </div>
+                <div class="sample-name">{{ s.label }}</div>
                 <div class="sample-file"><code>{{ s.filename }}</code></div>
-                <button type="button" class="btn btn-sm btn-outline">Load Sample</button>
             </div>
             {% endfor %}
         </div>
@@ -89,10 +132,10 @@
         <div class="pipeline-spec-box">
             <h3>Automated Pipeline Invariants:</h3>
             <ol>
-                <li><strong>Quality Gate:</strong> Blur (Laplacian var < 80), Brightness, & Retina Area checks. Rejects ungradable images immediately. <em>An ungradable image never outputs "No DR".</em></li>
-                <li><strong>Backbone:</strong> EfficientNet-B0 (ImageNet weights, strictly frozen).</li>
-                <li><strong>Explainability:</strong> Grad-CAM highlights backbone conv features + verifies heatmap peak is inside retina.</li>
-                <li><strong>Decision Support:</strong> Automated referral mapping (Routine / Prompt / Urgent / Recapture).</li>
+                <li><strong>Quality Gate:</strong> Blur, Contrast & Retina Area verification. Rejects degraded images as <code>UNGRA_RECAPTURE</code>. <em>An ungradable image never outputs "No DR".</em></li>
+                <li><strong>Frozen Backbone:</strong> EfficientNet-B0 feature extraction (1280 dimensions).</li>
+                <li><strong>Explainability:</strong> Grad-CAM highlights deep conv attention + validates peak lies inside retinal disc.</li>
+                <li><strong>Eye Health Analytics:</strong> Automated screening for Vasculature/Hypertensive risk, Macular DME risk, Glaucoma CDR, and Media Clarity.</li>
             </ol>
         </div>
     </div>

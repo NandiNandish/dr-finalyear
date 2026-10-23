@@ -30,6 +30,7 @@ from src.models.full_model import DRScreeningModel
 from src.explain.gradcam import GradCAM, GradCAMResult
 from src.decision import DecisionSupportEngine, ScreeningDecision
 from src.data.label_maps import LABEL_TO_NAME, CLASS_NAMES
+from src.analytics.eye_health import EyeHealthAnalyzer
 
 
 @dataclass
@@ -51,6 +52,7 @@ class ScreeningReport:
     original_image_base64: str
     gradcam_overlay_base64: Optional[str]
     disclaimer: str
+    eye_health: Optional[Dict[str, Any]] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -69,6 +71,7 @@ class ScreeningReport:
             "anatomical_check_passed": self.anatomical_check_passed,
             "quality_metrics": self.quality_metrics,
             "disclaimer": self.disclaimer,
+            "eye_health": self.eye_health,
         }
 
 
@@ -92,13 +95,14 @@ class ScreeningPipeline:
         image_size: int = 224,
         confidence_threshold: float = 0.60,
         device: str = "cpu",
+        quality_gate: Optional[QualityGate] = None,
     ):
         self.device = torch.device(device)
         self.active_head = active_head
         self.image_size = image_size
 
         # Step 2: Quality Gate
-        self.quality_gate = QualityGate()
+        self.quality_gate = quality_gate if quality_gate is not None else QualityGate()
 
         # Step 3: Preprocessor
         self.preprocessor = FundusPreprocessor(image_size=image_size, keep_circular=True, use_clahe=True)
@@ -125,6 +129,9 @@ class ScreeningPipeline:
 
         # Step 8: Decision Support Engine
         self.decision_engine = DecisionSupportEngine(confidence_threshold=confidence_threshold)
+
+        # Step 9: Eye Health Analytics Engine
+        self.eye_health_analyzer = EyeHealthAnalyzer()
 
     def screen(self, image_input: Union[str, np.ndarray, Image.Image, bytes]) -> ScreeningReport:
         """
@@ -174,6 +181,7 @@ class ScreeningPipeline:
                 original_image_base64=orig_b64,
                 gradcam_overlay_base64=None,
                 disclaimer=decision.disclaimer,
+                eye_health=None,
             )
 
         # 3. Preprocessing (Crop borders, circular FOV, resize 224, CLAHE)
@@ -209,6 +217,14 @@ class ScreeningPipeline:
             gradcam_outside_retina=cam_result.lies_outside_retina,
         )
 
+        # 9. Quantitative Eye Health Biomarker Extraction
+        biomarkers = self.eye_health_analyzer.analyze(
+            img_rgb=proc_rgb,
+            retina_mask=retina_mask,
+            dr_grade=pred_grade,
+            confidence=confidence,
+        )
+
         return ScreeningReport(
             is_gradable=True,
             rejection_code=None,
@@ -227,4 +243,5 @@ class ScreeningPipeline:
             original_image_base64=orig_b64,
             gradcam_overlay_base64=cam_b64,
             disclaimer=decision.disclaimer,
+            eye_health=biomarkers.to_dict(),
         )

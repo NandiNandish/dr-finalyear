@@ -1,0 +1,855 @@
+path,image_id,patient_id,split,label,is_dr,is_wnl,dr_grade_name,other_pathologies,is_referable,dataset
+data/rfmid/Training_set/1.jpg,RFMiD_1,PAT_RFMID_1,train,0,0,0,"Non-DR Pathology: HR,MCA",HR;MCA,1,RFMiD_2.0
+data/rfmid/Training_set/2.jpg,RFMiD_2,PAT_RFMID_2,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/3.jpg,RFMiD_3,PAT_RFMID_3,train,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR;MCA,1,RFMiD_2.0
+data/rfmid/Training_set/4.jpg,RFMiD_4,PAT_RFMID_4,train,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/5.jpg,RFMiD_5,PAT_RFMID_5,train,0,0,0,"Non-DR Pathology: EDN,ERM",EDN;ERM;PRH,1,RFMiD_2.0
+data/rfmid/Training_set/7.jpg,RFMiD_7,PAT_RFMID_7,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/8.jpg,RFMiD_8,PAT_RFMID_8,train,0,0,0,"Non-DR Pathology: CME,HR",CME;HR,1,RFMiD_2.0
+data/rfmid/Training_set/9.jpg,RFMiD_9,PAT_RFMID_9,train,0,0,0,"Non-DR Pathology: HR,LS",HR;LS,1,RFMiD_2.0
+data/rfmid/Training_set/10.jpg,RFMiD_10,PAT_RFMID_10,train,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Training_set/11.jpg,RFMiD_11,PAT_RFMID_11,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/12.jpg,RFMiD_12,PAT_RFMID_12,train,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/13.jpg,RFMiD_13,PAT_RFMID_13,train,0,0,0,"Non-DR Pathology: HR,MCA",HR;MCA,1,RFMiD_2.0
+data/rfmid/Training_set/14.jpg,RFMiD_14,PAT_RFMID_14,train,0,0,0,"Non-DR Pathology: CWS,HR",CWS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/15.jpg,RFMiD_15,PAT_RFMID_15,train,0,0,0,"Non-DR Pathology: CWS,HR",CWS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/16.jpg,RFMiD_16,PAT_RFMID_16,train,0,0,0,Non-DR Pathology: PRH,PRH,1,RFMiD_2.0
+data/rfmid/Training_set/17.jpg,RFMiD_17,PAT_RFMID_17,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/18.jpg,RFMiD_18,PAT_RFMID_18,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/19.jpg,RFMiD_19,PAT_RFMID_19,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/20.jpg,RFMiD_20,PAT_RFMID_20,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/21.jpg,RFMiD_21,PAT_RFMID_21,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/22.jpg,RFMiD_22,PAT_RFMID_22,train,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/23.jpg,RFMiD_23,PAT_RFMID_23,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/24.jpg,RFMiD_24,PAT_RFMID_24,train,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/26.jpg,RFMiD_26,PAT_RFMID_26,train,0,0,0,"Non-DR Pathology: HR,ODE",HR;ODE;PRH,1,RFMiD_2.0
+data/rfmid/Training_set/27.jpg,RFMiD_27,PAT_RFMID_27,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/28.jpg,RFMiD_28,PAT_RFMID_28,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/29.jpg,RFMiD_29,PAT_RFMID_29,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/30.jpg,RFMiD_30,PAT_RFMID_30,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR;MYA,1,RFMiD_2.0
+data/rfmid/Training_set/31.jpg,RFMiD_31,PAT_RFMID_31,train,0,0,0,Non-DR Pathology: LS,LS,1,RFMiD_2.0
+data/rfmid/Training_set/32.jpg,RFMiD_32,PAT_RFMID_32,train,0,0,0,"Non-DR Pathology: CRS,ERM",CRS;ERM,1,RFMiD_2.0
+data/rfmid/Training_set/33.jpg,RFMiD_33,PAT_RFMID_33,train,0,0,0,"Non-DR Pathology: EDN,LS",EDN;LS,1,RFMiD_2.0
+data/rfmid/Training_set/34.jpg,RFMiD_34,PAT_RFMID_34,train,0,0,0,"Non-DR Pathology: CME,CWS",CME;CWS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/35.jpg,RFMiD_35,PAT_RFMID_35,train,0,0,0,"Non-DR Pathology: CWS,HR",CWS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/36.jpg,RFMiD_36,PAT_RFMID_36,train,0,0,0,"Non-DR Pathology: MYA,TSLN",MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/37.jpg,RFMiD_37,PAT_RFMID_37,train,0,0,0,"Non-DR Pathology: CME,CWS",CME;CWS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/38.jpg,RFMiD_38,PAT_RFMID_38,train,0,0,0,"Non-DR Pathology: CME,CWS",CME;CWS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/39.jpg,RFMiD_39,PAT_RFMID_39,train,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Training_set/40.jpg,RFMiD_40,PAT_RFMID_40,train,0,0,0,"Non-DR Pathology: MYA,ODC",MYA;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/41.jpg,RFMiD_41,PAT_RFMID_41,train,0,0,0,Non-DR Pathology: RP,RP,1,RFMiD_2.0
+data/rfmid/Training_set/42.jpg,RFMiD_42,PAT_RFMID_42,train,0,0,0,"Non-DR Pathology: MS,MYA",MS;MYA;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/43.jpg,RFMiD_43,PAT_RFMID_43,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/44.jpg,RFMiD_44,PAT_RFMID_44,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/45.jpg,RFMiD_45,PAT_RFMID_45,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/46.jpg,RFMiD_46,PAT_RFMID_46,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/47.jpg,RFMiD_47,PAT_RFMID_47,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/48.jpg,RFMiD_48,PAT_RFMID_48,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/49.jpg,RFMiD_49,PAT_RFMID_49,train,0,0,0,Non-DR Pathology: PRH,PRH,1,RFMiD_2.0
+data/rfmid/Training_set/50.jpg,RFMiD_50,PAT_RFMID_50,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/51.jpg,RFMiD_51,PAT_RFMID_51,train,0,0,0,"Non-DR Pathology: MS,MYA",MS;MYA,1,RFMiD_2.0
+data/rfmid/Training_set/52.jpg,RFMiD_52,PAT_RFMID_52,train,0,0,0,"Non-DR Pathology: CME,ERM",CME;ERM,1,RFMiD_2.0
+data/rfmid/Training_set/53.jpg,RFMiD_53,PAT_RFMID_53,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/54.jpg,RFMiD_54,PAT_RFMID_54,train,0,0,0,"Non-DR Pathology: HR,LS",HR;LS,1,RFMiD_2.0
+data/rfmid/Training_set/55.jpg,RFMiD_55,PAT_RFMID_55,train,0,0,0,"Non-DR Pathology: HR,LS",HR;LS,1,RFMiD_2.0
+data/rfmid/Training_set/56.jpg,RFMiD_56,PAT_RFMID_56,train,0,0,0,"Non-DR Pathology: CRS,MYA",CRS;MYA,1,RFMiD_2.0
+data/rfmid/Training_set/57.jpg,RFMiD_57,PAT_RFMID_57,train,0,0,0,"Non-DR Pathology: ODC,VS",ODC;VS,1,RFMiD_2.0
+data/rfmid/Training_set/59.jpg,RFMiD_59,PAT_RFMID_59,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/60.jpg,RFMiD_60,PAT_RFMID_60,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/61.jpg,RFMiD_61,PAT_RFMID_61,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/62.jpg,RFMiD_62,PAT_RFMID_62,train,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/63.jpg,RFMiD_63,PAT_RFMID_63,train,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Training_set/64.jpg,RFMiD_64,PAT_RFMID_64,train,0,0,0,Non-DR Pathology: RPEC,RPEC,1,RFMiD_2.0
+data/rfmid/Training_set/66.jpg,RFMiD_66,PAT_RFMID_66,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/67.jpg,RFMiD_67,PAT_RFMID_67,train,0,0,0,"Non-DR Pathology: HR,RT",HR;RT;VS,1,RFMiD_2.0
+data/rfmid/Training_set/68.jpg,RFMiD_68,PAT_RFMID_68,train,0,0,0,"Non-DR Pathology: HR,RT",HR;RT;VS,1,RFMiD_2.0
+data/rfmid/Training_set/69.jpg,RFMiD_69,PAT_RFMID_69,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/70.jpg,RFMiD_70,PAT_RFMID_70,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/71.jpg,RFMiD_71,PAT_RFMID_71,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/72.jpg,RFMiD_72,PAT_RFMID_72,train,0,0,0,Non-DR Pathology: CWS,CWS,1,RFMiD_2.0
+data/rfmid/Training_set/73.jpg,RFMiD_73,PAT_RFMID_73,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/74.jpg,RFMiD_74,PAT_RFMID_74,train,0,0,0,Non-DR Pathology: LS,LS,1,RFMiD_2.0
+data/rfmid/Training_set/75.jpg,RFMiD_75,PAT_RFMID_75,train,0,0,0,"Non-DR Pathology: LS,RT",LS;RT,1,RFMiD_2.0
+data/rfmid/Training_set/76.jpg,RFMiD_76,PAT_RFMID_76,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/77.jpg,RFMiD_77,PAT_RFMID_77,train,0,0,0,"Non-DR Pathology: CME,HR",CME;HR,1,RFMiD_2.0
+data/rfmid/Training_set/78.jpg,RFMiD_78,PAT_RFMID_78,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/80.jpg,RFMiD_80,PAT_RFMID_80,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/81.jpg,RFMiD_81,PAT_RFMID_81,train,0,0,0,"Non-DR Pathology: MYA,TSLN",MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/82.jpg,RFMiD_82,PAT_RFMID_82,train,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/83.jpg,RFMiD_83,PAT_RFMID_83,train,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Training_set/84.jpg,RFMiD_84,PAT_RFMID_84,train,0,0,0,"Non-DR Pathology: CME,HR",CME;HR,1,RFMiD_2.0
+data/rfmid/Training_set/85.jpg,RFMiD_85,PAT_RFMID_85,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/86.jpg,RFMiD_86,PAT_RFMID_86,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/87.jpg,RFMiD_87,PAT_RFMID_87,train,0,0,0,Non-DR Pathology: PRH,PRH,1,RFMiD_2.0
+data/rfmid/Training_set/88.jpg,RFMiD_88,PAT_RFMID_88,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/90.jpg,RFMiD_90,PAT_RFMID_90,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/91.jpg,RFMiD_91,PAT_RFMID_91,train,0,0,0,"Non-DR Pathology: CWS,MYA",CWS;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/92.jpg,RFMiD_92,PAT_RFMID_92,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/93.jpg,RFMiD_93,PAT_RFMID_93,train,0,0,0,"Non-DR Pathology: HR,MYA",HR;MYA,1,RFMiD_2.0
+data/rfmid/Training_set/94.jpg,RFMiD_94,PAT_RFMID_94,train,0,0,0,"Non-DR Pathology: CRS,ODC",CRS;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/95.jpg,RFMiD_95,PAT_RFMID_95,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/96.jpg,RFMiD_96,PAT_RFMID_96,train,0,0,0,Non-DR Pathology: RP,RP,1,RFMiD_2.0
+data/rfmid/Training_set/98.jpg,RFMiD_98,PAT_RFMID_98,train,0,0,0,Non-DR Pathology: ARMD,ARMD,1,RFMiD_2.0
+data/rfmid/Training_set/99.jpg,RFMiD_99,PAT_RFMID_99,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/100.jpg,RFMiD_100,PAT_RFMID_100,train,0,0,0,"Non-DR Pathology: CL,LS",CL;LS,1,RFMiD_2.0
+data/rfmid/Training_set/101.jpg,RFMiD_101,PAT_RFMID_101,train,0,0,0,"Non-DR Pathology: MYA,ODC",MYA;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/102.jpg,RFMiD_102,PAT_RFMID_102,train,0,0,0,"Non-DR Pathology: MYA,ODC",MYA;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/103.jpg,RFMiD_103,PAT_RFMID_103,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/104.jpg,RFMiD_104,PAT_RFMID_104,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/105.jpg,RFMiD_105,PAT_RFMID_105,train,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Training_set/106.jpg,RFMiD_106,PAT_RFMID_106,train,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Training_set/107.jpg,RFMiD_107,PAT_RFMID_107,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/108.jpg,RFMiD_108,PAT_RFMID_108,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/109.jpg,RFMiD_109,PAT_RFMID_109,train,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Training_set/110.jpg,RFMiD_110,PAT_RFMID_110,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/111.jpg,RFMiD_111,PAT_RFMID_111,train,0,0,0,"Non-DR Pathology: LS,MCA",LS;MCA,1,RFMiD_2.0
+data/rfmid/Training_set/112.jpg,RFMiD_112,PAT_RFMID_112,train,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Training_set/113.jpg,RFMiD_113,PAT_RFMID_113,train,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Training_set/114.jpg,RFMiD_114,PAT_RFMID_114,train,0,0,0,Non-DR Pathology: DN,DN,1,RFMiD_2.0
+data/rfmid/Training_set/115.jpg,RFMiD_115,PAT_RFMID_115,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/116.jpg,RFMiD_116,PAT_RFMID_116,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/117.jpg,RFMiD_117,PAT_RFMID_117,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR;LS,1,RFMiD_2.0
+data/rfmid/Training_set/118.jpg,RFMiD_118,PAT_RFMID_118,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/119.jpg,RFMiD_119,PAT_RFMID_119,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/121.jpg,RFMiD_121,PAT_RFMID_121,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/122.jpg,RFMiD_122,PAT_RFMID_122,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/123.jpg,RFMiD_123,PAT_RFMID_123,train,0,0,0,"Non-DR Pathology: CL,RT",CL;RT,1,RFMiD_2.0
+data/rfmid/Training_set/124.jpg,RFMiD_124,PAT_RFMID_124,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/125.jpg,RFMiD_125,PAT_RFMID_125,train,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Training_set/126.jpg,RFMiD_126,PAT_RFMID_126,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/127.jpg,RFMiD_127,PAT_RFMID_127,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/128.jpg,RFMiD_128,PAT_RFMID_128,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/129.jpg,RFMiD_129,PAT_RFMID_129,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/130.jpg,RFMiD_130,PAT_RFMID_130,train,0,0,0,"Non-DR Pathology: LS,ST",LS;ST,1,RFMiD_2.0
+data/rfmid/Training_set/132.jpg,RFMiD_132,PAT_RFMID_132,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/133.jpg,RFMiD_133,PAT_RFMID_133,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/134.jpg,RFMiD_134,PAT_RFMID_134,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/135.jpg,RFMiD_135,PAT_RFMID_135,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/136.jpg,RFMiD_136,PAT_RFMID_136,train,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Training_set/137.jpg,RFMiD_137,PAT_RFMID_137,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/138.jpg,RFMiD_138,PAT_RFMID_138,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/139.jpg,RFMiD_139,PAT_RFMID_139,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/140.jpg,RFMiD_140,PAT_RFMID_140,train,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Training_set/141.jpg,RFMiD_141,PAT_RFMID_141,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/142.jpg,RFMiD_142,PAT_RFMID_142,train,0,0,0,"Non-DR Pathology: HR,ODC",HR;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/143.jpg,RFMiD_143,PAT_RFMID_143,train,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Training_set/144.jpg,RFMiD_144,PAT_RFMID_144,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/145.jpg,RFMiD_145,PAT_RFMID_145,train,0,0,0,"Non-DR Pathology: CRS,ODE",CRS;ODE,1,RFMiD_2.0
+data/rfmid/Training_set/146.jpg,RFMiD_146,PAT_RFMID_146,train,0,0,0,Non-DR Pathology: DN,DN,1,RFMiD_2.0
+data/rfmid/Training_set/147.jpg,RFMiD_147,PAT_RFMID_147,train,0,0,0,Non-DR Pathology: RS,RS,1,RFMiD_2.0
+data/rfmid/Training_set/148.jpg,RFMiD_148,PAT_RFMID_148,train,0,0,0,Non-DR Pathology: DN,DN,1,RFMiD_2.0
+data/rfmid/Training_set/149.jpg,RFMiD_149,PAT_RFMID_149,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/150.jpg,RFMiD_150,PAT_RFMID_150,train,0,0,0,"Non-DR Pathology: HR,MYA",HR;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/152.jpg,RFMiD_152,PAT_RFMID_152,train,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Training_set/153.jpg,RFMiD_153,PAT_RFMID_153,train,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Training_set/154.jpg,RFMiD_154,PAT_RFMID_154,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/155.jpg,RFMiD_155,PAT_RFMID_155,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/156.jpg,RFMiD_156,PAT_RFMID_156,train,0,0,0,"Non-DR Pathology: ODC,TSLN",ODC;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/157.jpg,RFMiD_157,PAT_RFMID_157,train,0,0,0,"Non-DR Pathology: CWS,ODE",CWS;ODE,1,RFMiD_2.0
+data/rfmid/Training_set/158.jpg,RFMiD_158,PAT_RFMID_158,train,0,0,0,"Non-DR Pathology: CME,RT",CME;RT,1,RFMiD_2.0
+data/rfmid/Training_set/159.jpg,RFMiD_159,PAT_RFMID_159,train,0,0,0,"Non-DR Pathology: CME,RT",CME;RT,1,RFMiD_2.0
+data/rfmid/Training_set/160.jpg,RFMiD_160,PAT_RFMID_160,train,0,0,0,"Non-DR Pathology: HR,MH",HR;MH,1,RFMiD_2.0
+data/rfmid/Training_set/161.jpg,RFMiD_161,PAT_RFMID_161,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/162.jpg,RFMiD_162,PAT_RFMID_162,train,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Training_set/163.jpg,RFMiD_163,PAT_RFMID_163,train,0,0,0,"Non-DR Pathology: MYA,TSLN",MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/164.jpg,RFMiD_164,PAT_RFMID_164,train,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN,1,RFMiD_2.0
+data/rfmid/Training_set/165.jpg,RFMiD_165,PAT_RFMID_165,train,0,0,0,"Non-DR Pathology: HR,MS",HR;MS,1,RFMiD_2.0
+data/rfmid/Training_set/166.jpg,RFMiD_166,PAT_RFMID_166,train,0,0,0,"Non-DR Pathology: HR,MCA",HR;MCA,1,RFMiD_2.0
+data/rfmid/Training_set/168.jpg,RFMiD_168,PAT_RFMID_168,train,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Training_set/169.jpg,RFMiD_169,PAT_RFMID_169,train,0,0,0,"Non-DR Pathology: ARMD,RT",ARMD;RT,1,RFMiD_2.0
+data/rfmid/Training_set/170.jpg,RFMiD_170,PAT_RFMID_170,train,0,0,0,"Non-DR Pathology: HR,MH",HR;MH,1,RFMiD_2.0
+data/rfmid/Training_set/171.jpg,RFMiD_171,PAT_RFMID_171,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/172.jpg,RFMiD_172,PAT_RFMID_172,train,0,0,0,"Non-DR Pathology: MYA,ODC",MYA;ODC;RT,1,RFMiD_2.0
+data/rfmid/Training_set/173.jpg,RFMiD_173,PAT_RFMID_173,train,0,0,0,"Non-DR Pathology: MYA,ODC",MYA;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/174.jpg,RFMiD_174,PAT_RFMID_174,train,0,0,0,Non-DR Pathology: CL,CL,1,RFMiD_2.0
+data/rfmid/Training_set/175.jpg,RFMiD_175,PAT_RFMID_175,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/176.jpg,RFMiD_176,PAT_RFMID_176,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/177.jpg,RFMiD_177,PAT_RFMID_177,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/178.jpg,RFMiD_178,PAT_RFMID_178,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/179.jpg,RFMiD_179,PAT_RFMID_179,train,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Training_set/180.jpg,RFMiD_180,PAT_RFMID_180,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/182.jpg,RFMiD_182,PAT_RFMID_182,train,0,0,0,"Non-DR Pathology: MS,RT",MS;RT,1,RFMiD_2.0
+data/rfmid/Training_set/183.jpg,RFMiD_183,PAT_RFMID_183,train,0,0,0,Non-DR Pathology: ARMD,ARMD,1,RFMiD_2.0
+data/rfmid/Training_set/184.jpg,RFMiD_184,PAT_RFMID_184,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/185.jpg,RFMiD_185,PAT_RFMID_185,train,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Training_set/186.jpg,RFMiD_186,PAT_RFMID_186,train,0,0,0,"Non-DR Pathology: MYA,ODC",MYA;ODC;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/187.jpg,RFMiD_187,PAT_RFMID_187,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/188.jpg,RFMiD_188,PAT_RFMID_188,train,0,0,0,"Non-DR Pathology: MH,ODE",MH;ODE,1,RFMiD_2.0
+data/rfmid/Training_set/192.jpg,RFMiD_192,PAT_RFMID_192,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/193.jpg,RFMiD_193,PAT_RFMID_193,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/194.jpg,RFMiD_194,PAT_RFMID_194,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/195.jpg,RFMiD_195,PAT_RFMID_195,train,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Training_set/196.jpg,RFMiD_196,PAT_RFMID_196,train,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Training_set/197.jpg,RFMiD_197,PAT_RFMID_197,train,0,0,0,"Non-DR Pathology: MH,ODC",MH;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/198.jpg,RFMiD_198,PAT_RFMID_198,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/202.jpg,RFMiD_202,PAT_RFMID_202,train,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN,1,RFMiD_2.0
+data/rfmid/Training_set/203.jpg,RFMiD_203,PAT_RFMID_203,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/204.jpg,RFMiD_204,PAT_RFMID_204,train,0,0,0,Non-DR Pathology: MHL,MHL,1,RFMiD_2.0
+data/rfmid/Training_set/205.jpg,RFMiD_205,PAT_RFMID_205,train,0,0,0,"Non-DR Pathology: MH,MHL",MH;MHL,1,RFMiD_2.0
+data/rfmid/Training_set/206.jpg,RFMiD_206,PAT_RFMID_206,train,0,0,0,"Non-DR Pathology: ARMD,ODC",ARMD;ODC,1,RFMiD_2.0
+data/rfmid/Training_set/208.jpg,RFMiD_208,PAT_RFMID_208,train,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN,1,RFMiD_2.0
+data/rfmid/Training_set/209.jpg,RFMiD_209,PAT_RFMID_209,train,0,0,0,"Non-DR Pathology: MYA,TSLN",MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/211.jpg,RFMiD_211,PAT_RFMID_211,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/212.jpg,RFMiD_212,PAT_RFMID_212,train,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Training_set/213.jpg,RFMiD_213,PAT_RFMID_213,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/214.jpg,RFMiD_214,PAT_RFMID_214,train,0,0,0,"Non-DR Pathology: HPED,MS",HPED;MS,1,RFMiD_2.0
+data/rfmid/Training_set/215.jpg,RFMiD_215,PAT_RFMID_215,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/217.jpg,RFMiD_217,PAT_RFMID_217,train,0,0,0,"Non-DR Pathology: MH,ODE",MH;ODE,1,RFMiD_2.0
+data/rfmid/Training_set/218.jpg,RFMiD_218,PAT_RFMID_218,train,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Training_set/219.jpg,RFMiD_219,PAT_RFMID_219,train,0,0,0,"Non-DR Pathology: CRAO,CRS",CRAO;CRS,1,RFMiD_2.0
+data/rfmid/Training_set/224.jpg,RFMiD_224,PAT_RFMID_224,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/225.jpg,RFMiD_225,PAT_RFMID_225,train,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Training_set/226.jpg,RFMiD_226,PAT_RFMID_226,train,0,0,0,"Non-DR Pathology: CRVO,CWS",CRVO;CWS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/227.jpg,RFMiD_227,PAT_RFMID_227,train,0,0,0,"Non-DR Pathology: CRVO,HR",CRVO;HR,1,RFMiD_2.0
+data/rfmid/Training_set/229.jpg,RFMiD_229,PAT_RFMID_229,train,0,0,0,"Non-DR Pathology: EDN,RT",EDN;RT,1,RFMiD_2.0
+data/rfmid/Training_set/230.jpg,RFMiD_230,PAT_RFMID_230,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/234.jpg,RFMiD_234,PAT_RFMID_234,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/235.jpg,RFMiD_235,PAT_RFMID_235,train,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN;LS,1,RFMiD_2.0
+data/rfmid/Training_set/236.jpg,RFMiD_236,PAT_RFMID_236,train,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Training_set/237.jpg,RFMiD_237,PAT_RFMID_237,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/238.jpg,RFMiD_238,PAT_RFMID_238,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/240.jpg,RFMiD_240,PAT_RFMID_240,train,0,0,0,"Non-DR Pathology: CF,CRS",CF;CRS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/241.jpg,RFMiD_241,PAT_RFMID_241,train,0,0,0,"Non-DR Pathology: CF,CRS",CF;CRS;HR,1,RFMiD_2.0
+data/rfmid/Training_set/242.jpg,RFMiD_242,PAT_RFMID_242,train,0,0,0,"Non-DR Pathology: ARMD,MS",ARMD;MS,1,RFMiD_2.0
+data/rfmid/Training_set/244.jpg,RFMiD_244,PAT_RFMID_244,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/245.jpg,RFMiD_245,PAT_RFMID_245,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/246.jpg,RFMiD_246,PAT_RFMID_246,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/248.jpg,RFMiD_248,PAT_RFMID_248,train,0,0,0,Non-DR Pathology: CWS,CWS,1,RFMiD_2.0
+data/rfmid/Training_set/249.jpg,RFMiD_249,PAT_RFMID_249,train,0,0,0,"Non-DR Pathology: MYA,TSLN",MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/250.jpg,RFMiD_250,PAT_RFMID_250,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR;MH,1,RFMiD_2.0
+data/rfmid/Training_set/257.jpg,RFMiD_257,PAT_RFMID_257,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/258.jpg,RFMiD_258,PAT_RFMID_258,train,0,0,0,"Non-DR Pathology: AION,EDN",AION;EDN;ODE,1,RFMiD_2.0
+data/rfmid/Training_set/259.jpg,RFMiD_259,PAT_RFMID_259,train,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Training_set/261.jpg,RFMiD_261,PAT_RFMID_261,train,0,0,0,Non-DR Pathology: MHL,MHL,1,RFMiD_2.0
+data/rfmid/Training_set/263.jpg,RFMiD_263,PAT_RFMID_263,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/264.jpg,RFMiD_264,PAT_RFMID_264,train,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Training_set/266.jpg,RFMiD_266,PAT_RFMID_266,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/268.jpg,RFMiD_268,PAT_RFMID_268,train,0,0,0,"Non-DR Pathology: CF,CRS",CF;CRS;MS,1,RFMiD_2.0
+data/rfmid/Training_set/272.jpg,RFMiD_272,PAT_RFMID_272,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/273.jpg,RFMiD_273,PAT_RFMID_273,train,0,0,0,"Non-DR Pathology: CRVO,TV",CRVO;TV,1,RFMiD_2.0
+data/rfmid/Training_set/274.jpg,RFMiD_274,PAT_RFMID_274,train,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Training_set/275.jpg,RFMiD_275,PAT_RFMID_275,train,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Training_set/276.jpg,RFMiD_276,PAT_RFMID_276,train,0,0,0,"Non-DR Pathology: CWS,MH",CWS;MH,1,RFMiD_2.0
+data/rfmid/Training_set/277.jpg,RFMiD_277,PAT_RFMID_277,train,0,0,0,"Non-DR Pathology: CWS,MH",CWS;MH,1,RFMiD_2.0
+data/rfmid/Training_set/279.jpg,RFMiD_279,PAT_RFMID_279,train,0,0,0,"Non-DR Pathology: MHL,MYA",MHL;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/282.jpg,RFMiD_282,PAT_RFMID_282,train,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Training_set/285.jpg,RFMiD_285,PAT_RFMID_285,train,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Training_set/286.jpg,RFMiD_286,PAT_RFMID_286,train,0,0,0,"Non-DR Pathology: MH,MYA",MH;MYA;ODC;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/300.jpg,RFMiD_300,PAT_RFMID_300,train,0,0,0,"Non-DR Pathology: MH,ODE",MH;ODE,1,RFMiD_2.0
+data/rfmid/Training_set/301.jpg,RFMiD_301,PAT_RFMID_301,train,0,0,0,"Non-DR Pathology: MYA,TD",MYA;TD;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/302.jpg,RFMiD_302,PAT_RFMID_302,train,0,0,0,"Non-DR Pathology: MH,MS",MH;MS;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/307.jpg,RFMiD_307,PAT_RFMID_307,train,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/308.jpg,RFMiD_308,PAT_RFMID_308,train,0,0,0,Non-DR Pathology: ST,ST,1,RFMiD_2.0
+data/rfmid/Training_set/310.jpg,RFMiD_310,PAT_RFMID_310,train,0,0,0,Non-DR Pathology: ODE,ODE,1,RFMiD_2.0
+data/rfmid/Training_set/312.jpg,RFMiD_312,PAT_RFMID_312,train,0,0,0,Non-DR Pathology: ODE,ODE,1,RFMiD_2.0
+data/rfmid/Training_set/314.jpg,RFMiD_314,PAT_RFMID_314,train,0,0,0,Non-DR Pathology: ODE,ODE,1,RFMiD_2.0
+data/rfmid/Training_set/315.jpg,RFMiD_315,PAT_RFMID_315,train,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/316.jpg,RFMiD_316,PAT_RFMID_316,train,0,0,0,Non-DR Pathology: GRT,GRT,1,RFMiD_2.0
+data/rfmid/Training_set/318.jpg,RFMiD_318,PAT_RFMID_318,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/320.jpg,RFMiD_320,PAT_RFMID_320,train,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Training_set/321.jpg,RFMiD_321,PAT_RFMID_321,train,0,0,0,"Non-DR Pathology: CRS,ODP",CRS;ODP,1,RFMiD_2.0
+data/rfmid/Training_set/323.jpg,RFMiD_323,PAT_RFMID_323,train,0,0,0,"Non-DR Pathology: ODP,TV",ODP;TV,1,RFMiD_2.0
+data/rfmid/Training_set/324.jpg,RFMiD_324,PAT_RFMID_324,train,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Training_set/327.jpg,RFMiD_327,PAT_RFMID_327,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/328.jpg,RFMiD_328,PAT_RFMID_328,train,0,0,0,Non-DR Pathology: VS,VS,1,RFMiD_2.0
+data/rfmid/Training_set/329.jpg,RFMiD_329,PAT_RFMID_329,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/330.jpg,RFMiD_330,PAT_RFMID_330,train,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Training_set/331.jpg,RFMiD_331,PAT_RFMID_331,train,0,0,0,Non-DR Pathology: RS,RS,1,RFMiD_2.0
+data/rfmid/Training_set/333.jpg,RFMiD_333,PAT_RFMID_333,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/335.jpg,RFMiD_335,PAT_RFMID_335,train,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/336.jpg,RFMiD_336,PAT_RFMID_336,train,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/337.jpg,RFMiD_337,PAT_RFMID_337,train,0,0,0,Non-DR Pathology: RTR,RTR,1,RFMiD_2.0
+data/rfmid/Training_set/339.jpg,RFMiD_339,PAT_RFMID_339,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/342.jpg,RFMiD_342,PAT_RFMID_342,train,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Training_set/346.jpg,RFMiD_346,PAT_RFMID_346,train,0,0,0,Non-DR Pathology: DN,DN,1,RFMiD_2.0
+data/rfmid/Training_set/355.jpg,RFMiD_355,PAT_RFMID_355,train,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Training_set/358.jpg,RFMiD_358,PAT_RFMID_358,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/360.jpg,RFMiD_360,PAT_RFMID_360,train,0,0,0,Non-DR Pathology: CB,CB,1,RFMiD_2.0
+data/rfmid/Training_set/361.jpg,RFMiD_361,PAT_RFMID_361,train,0,0,0,"Non-DR Pathology: CB,ODP",CB;ODP,1,RFMiD_2.0
+data/rfmid/Training_set/362.jpg,RFMiD_362,PAT_RFMID_362,train,0,0,0,"Non-DR Pathology: EDN,ME",EDN;ME,1,RFMiD_2.0
+data/rfmid/Training_set/367.jpg,RFMiD_367,PAT_RFMID_367,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/372.jpg,RFMiD_372,PAT_RFMID_372,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/377.jpg,RFMiD_377,PAT_RFMID_377,train,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Training_set/379.jpg,RFMiD_379,PAT_RFMID_379,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/396.jpg,RFMiD_396,PAT_RFMID_396,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/397.jpg,RFMiD_397,PAT_RFMID_397,train,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Training_set/399.jpg,RFMiD_399,PAT_RFMID_399,train,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Training_set/401.jpg,RFMiD_401,PAT_RFMID_401,train,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Training_set/402.jpg,RFMiD_402,PAT_RFMID_402,train,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Training_set/403.jpg,RFMiD_403,PAT_RFMID_403,train,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Training_set/406.jpg,RFMiD_406,PAT_RFMID_406,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/408.jpg,RFMiD_408,PAT_RFMID_408,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/410.jpg,RFMiD_410,PAT_RFMID_410,train,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Training_set/411.jpg,RFMiD_411,PAT_RFMID_411,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/412.jpg,RFMiD_412,PAT_RFMID_412,train,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Training_set/413.jpg,RFMiD_413,PAT_RFMID_413,train,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Training_set/414.jpg,RFMiD_414,PAT_RFMID_414,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/415.jpg,RFMiD_415,PAT_RFMID_415,train,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Training_set/420.jpg,RFMiD_420,PAT_RFMID_420,train,0,0,0,Non-DR Pathology: AION,AION,1,RFMiD_2.0
+data/rfmid/Training_set/427.jpg,RFMiD_427,PAT_RFMID_427,train,0,0,0,"Non-DR Pathology: OPDM,TV",OPDM;TV,1,RFMiD_2.0
+data/rfmid/Training_set/429.jpg,RFMiD_429,PAT_RFMID_429,train,0,0,0,Non-DR Pathology: RS,RS,1,RFMiD_2.0
+data/rfmid/Training_set/430.jpg,RFMiD_430,PAT_RFMID_430,train,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Training_set/431.jpg,RFMiD_431,PAT_RFMID_431,train,0,0,0,Non-DR Pathology: RS,RS,1,RFMiD_2.0
+data/rfmid/Training_set/434.jpg,RFMiD_434,PAT_RFMID_434,train,0,0,0,"Non-DR Pathology: EDN,ON",EDN;ON,1,RFMiD_2.0
+data/rfmid/Training_set/438.jpg,RFMiD_438,PAT_RFMID_438,train,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Training_set/442.jpg,RFMiD_442,PAT_RFMID_442,train,0,0,0,Non-DR Pathology: SOFE,SOFE,1,RFMiD_2.0
+data/rfmid/Training_set/443.jpg,RFMiD_443,PAT_RFMID_443,train,0,0,0,Non-DR Pathology: SOFE,SOFE,1,RFMiD_2.0
+data/rfmid/Training_set/444.jpg,RFMiD_444,PAT_RFMID_444,train,0,0,0,Non-DR Pathology: RS,RS,1,RFMiD_2.0
+data/rfmid/Training_set/450.jpg,RFMiD_450,PAT_RFMID_450,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/452.jpg,RFMiD_452,PAT_RFMID_452,train,0,0,0,Non-DR Pathology: CSC,CSC,1,RFMiD_2.0
+data/rfmid/Training_set/454.jpg,RFMiD_454,PAT_RFMID_454,train,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Training_set/457.jpg,RFMiD_457,PAT_RFMID_457,train,0,0,0,Non-DR Pathology: RPEC,RPEC,1,RFMiD_2.0
+data/rfmid/Training_set/458.jpg,RFMiD_458,PAT_RFMID_458,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/485.jpg,RFMiD_485,PAT_RFMID_485,train,0,0,0,"Non-DR Pathology: CNV,MYA",CNV;MYA,1,RFMiD_2.0
+data/rfmid/Training_set/504.jpg,RFMiD_504,PAT_RFMID_504,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/512.jpg,RFMiD_512,PAT_RFMID_512,train,0,0,0,"Non-DR Pathology: BRVO,ODE",BRVO;ODE,1,RFMiD_2.0
+data/rfmid/Training_set/515.jpg,RFMiD_515,PAT_RFMID_515,train,0,0,0,"Non-DR Pathology: RD,RHL",RD;RHL,1,RFMiD_2.0
+data/rfmid/Training_set/518.jpg,RFMiD_518,PAT_RFMID_518,train,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Training_set/525.jpg,RFMiD_525,PAT_RFMID_525,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/526.jpg,RFMiD_526,PAT_RFMID_526,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/529.jpg,RFMiD_529,PAT_RFMID_529,train,0,0,0,"Non-DR Pathology: BRVO,CWS",BRVO;CWS,1,RFMiD_2.0
+data/rfmid/Training_set/556.jpg,RFMiD_556,PAT_RFMID_556,train,0,0,0,"Non-DR Pathology: ODP,TV",ODP;TV,1,RFMiD_2.0
+data/rfmid/Training_set/558.jpg,RFMiD_558,PAT_RFMID_558,train,0,0,0,Non-DR Pathology: AH,AH,1,RFMiD_2.0
+data/rfmid/Training_set/568.jpg,RFMiD_568,PAT_RFMID_568,train,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Training_set/569.jpg,RFMiD_569,PAT_RFMID_569,train,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Training_set/570.jpg,RFMiD_570,PAT_RFMID_570,train,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Training_set/571.jpg,RFMiD_571,PAT_RFMID_571,train,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Training_set/572.jpg,RFMiD_572,PAT_RFMID_572,train,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Training_set/573.jpg,RFMiD_573,PAT_RFMID_573,train,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Training_set/574.jpg,RFMiD_574,PAT_RFMID_574,train,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Training_set/579.jpg,RFMiD_579,PAT_RFMID_579,train,0,0,0,Non-DR Pathology: IIH,IIH,1,RFMiD_2.0
+data/rfmid/Training_set/580.jpg,RFMiD_580,PAT_RFMID_580,train,0,0,0,Non-DR Pathology: IIH,IIH,1,RFMiD_2.0
+data/rfmid/Training_set/581.jpg,RFMiD_581,PAT_RFMID_581,train,0,0,0,Non-DR Pathology: IIH,IIH,1,RFMiD_2.0
+data/rfmid/Training_set/585.jpg,RFMiD_585,PAT_RFMID_585,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/586.jpg,RFMiD_586,PAT_RFMID_586,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/587.jpg,RFMiD_587,PAT_RFMID_587,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/588.jpg,RFMiD_588,PAT_RFMID_588,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/589.jpg,RFMiD_589,PAT_RFMID_589,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/590.jpg,RFMiD_590,PAT_RFMID_590,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/591.jpg,RFMiD_591,PAT_RFMID_591,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/592.jpg,RFMiD_592,PAT_RFMID_592,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/593.jpg,RFMiD_593,PAT_RFMID_593,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/594.jpg,RFMiD_594,PAT_RFMID_594,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/595.jpg,RFMiD_595,PAT_RFMID_595,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/596.jpg,RFMiD_596,PAT_RFMID_596,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/597.jpg,RFMiD_597,PAT_RFMID_597,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/598.jpg,RFMiD_598,PAT_RFMID_598,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/599.jpg,RFMiD_599,PAT_RFMID_599,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/600.jpg,RFMiD_600,PAT_RFMID_600,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/601.jpg,RFMiD_601,PAT_RFMID_601,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/602.jpg,RFMiD_602,PAT_RFMID_602,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/603.jpg,RFMiD_603,PAT_RFMID_603,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/604.jpg,RFMiD_604,PAT_RFMID_604,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/605.jpg,RFMiD_605,PAT_RFMID_605,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/606.jpg,RFMiD_606,PAT_RFMID_606,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/607.jpg,RFMiD_607,PAT_RFMID_607,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/608.jpg,RFMiD_608,PAT_RFMID_608,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/609.jpg,RFMiD_609,PAT_RFMID_609,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/610.jpg,RFMiD_610,PAT_RFMID_610,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/611.jpg,RFMiD_611,PAT_RFMID_611,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/612.jpg,RFMiD_612,PAT_RFMID_612,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/613.jpg,RFMiD_613,PAT_RFMID_613,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/614.jpg,RFMiD_614,PAT_RFMID_614,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/615.jpg,RFMiD_615,PAT_RFMID_615,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/616.jpg,RFMiD_616,PAT_RFMID_616,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/617.jpg,RFMiD_617,PAT_RFMID_617,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/618.jpg,RFMiD_618,PAT_RFMID_618,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/619.jpg,RFMiD_619,PAT_RFMID_619,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/620.jpg,RFMiD_620,PAT_RFMID_620,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/621.jpg,RFMiD_621,PAT_RFMID_621,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/622.jpg,RFMiD_622,PAT_RFMID_622,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/623.jpg,RFMiD_623,PAT_RFMID_623,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/624.jpg,RFMiD_624,PAT_RFMID_624,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/625.jpg,RFMiD_625,PAT_RFMID_625,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/626.jpg,RFMiD_626,PAT_RFMID_626,train,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Training_set/655.jpg,RFMiD_655,PAT_RFMID_655,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/656.jpg,RFMiD_656,PAT_RFMID_656,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/657.jpg,RFMiD_657,PAT_RFMID_657,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/658.jpg,RFMiD_658,PAT_RFMID_658,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/659.jpg,RFMiD_659,PAT_RFMID_659,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/660.jpg,RFMiD_660,PAT_RFMID_660,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/661.jpg,RFMiD_661,PAT_RFMID_661,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/662.jpg,RFMiD_662,PAT_RFMID_662,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/663.jpg,RFMiD_663,PAT_RFMID_663,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/664.jpg,RFMiD_664,PAT_RFMID_664,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/665.jpg,RFMiD_665,PAT_RFMID_665,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/666.jpg,RFMiD_666,PAT_RFMID_666,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/667.jpg,RFMiD_667,PAT_RFMID_667,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/668.jpg,RFMiD_668,PAT_RFMID_668,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/669.jpg,RFMiD_669,PAT_RFMID_669,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/670.jpg,RFMiD_670,PAT_RFMID_670,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/671.jpg,RFMiD_671,PAT_RFMID_671,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/672.jpg,RFMiD_672,PAT_RFMID_672,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/673.jpg,RFMiD_673,PAT_RFMID_673,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/674.jpg,RFMiD_674,PAT_RFMID_674,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/675.jpg,RFMiD_675,PAT_RFMID_675,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/676.jpg,RFMiD_676,PAT_RFMID_676,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/677.jpg,RFMiD_677,PAT_RFMID_677,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/678.jpg,RFMiD_678,PAT_RFMID_678,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/679.jpg,RFMiD_679,PAT_RFMID_679,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/680.jpg,RFMiD_680,PAT_RFMID_680,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/681.jpg,RFMiD_681,PAT_RFMID_681,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/682.jpg,RFMiD_682,PAT_RFMID_682,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/683.jpg,RFMiD_683,PAT_RFMID_683,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/684.jpg,RFMiD_684,PAT_RFMID_684,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/685.jpg,RFMiD_685,PAT_RFMID_685,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/686.jpg,RFMiD_686,PAT_RFMID_686,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/687.jpg,RFMiD_687,PAT_RFMID_687,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/688.jpg,RFMiD_688,PAT_RFMID_688,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/689.jpg,RFMiD_689,PAT_RFMID_689,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/690.jpg,RFMiD_690,PAT_RFMID_690,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/691.jpg,RFMiD_691,PAT_RFMID_691,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/692.jpg,RFMiD_692,PAT_RFMID_692,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/693.jpg,RFMiD_693,PAT_RFMID_693,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/694.jpg,RFMiD_694,PAT_RFMID_694,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/695.jpg,RFMiD_695,PAT_RFMID_695,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/696.jpg,RFMiD_696,PAT_RFMID_696,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/697.jpg,RFMiD_697,PAT_RFMID_697,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/698.jpg,RFMiD_698,PAT_RFMID_698,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/699.jpg,RFMiD_699,PAT_RFMID_699,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/700.jpg,RFMiD_700,PAT_RFMID_700,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/701.jpg,RFMiD_701,PAT_RFMID_701,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/702.jpg,RFMiD_702,PAT_RFMID_702,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/703.jpg,RFMiD_703,PAT_RFMID_703,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/704.jpg,RFMiD_704,PAT_RFMID_704,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/705.jpg,RFMiD_705,PAT_RFMID_705,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/706.jpg,RFMiD_706,PAT_RFMID_706,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/707.jpg,RFMiD_707,PAT_RFMID_707,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/708.jpg,RFMiD_708,PAT_RFMID_708,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/709.jpg,RFMiD_709,PAT_RFMID_709,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/710.jpg,RFMiD_710,PAT_RFMID_710,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/711.jpg,RFMiD_711,PAT_RFMID_711,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/712.jpg,RFMiD_712,PAT_RFMID_712,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/713.jpg,RFMiD_713,PAT_RFMID_713,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/714.jpg,RFMiD_714,PAT_RFMID_714,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/715.jpg,RFMiD_715,PAT_RFMID_715,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/716.jpg,RFMiD_716,PAT_RFMID_716,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/717.jpg,RFMiD_717,PAT_RFMID_717,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/718.jpg,RFMiD_718,PAT_RFMID_718,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/719.jpg,RFMiD_719,PAT_RFMID_719,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/720.jpg,RFMiD_720,PAT_RFMID_720,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/721.jpg,RFMiD_721,PAT_RFMID_721,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/722.jpg,RFMiD_722,PAT_RFMID_722,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/723.jpg,RFMiD_723,PAT_RFMID_723,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/724.jpg,RFMiD_724,PAT_RFMID_724,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/725.jpg,RFMiD_725,PAT_RFMID_725,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/726.jpg,RFMiD_726,PAT_RFMID_726,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/727.jpg,RFMiD_727,PAT_RFMID_727,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/728.jpg,RFMiD_728,PAT_RFMID_728,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/729.jpg,RFMiD_729,PAT_RFMID_729,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/730.jpg,RFMiD_730,PAT_RFMID_730,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/731.jpg,RFMiD_731,PAT_RFMID_731,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/732.jpg,RFMiD_732,PAT_RFMID_732,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/733.jpg,RFMiD_733,PAT_RFMID_733,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/734.jpg,RFMiD_734,PAT_RFMID_734,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/735.jpg,RFMiD_735,PAT_RFMID_735,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/736.jpg,RFMiD_736,PAT_RFMID_736,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/737.jpg,RFMiD_737,PAT_RFMID_737,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/738.jpg,RFMiD_738,PAT_RFMID_738,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/739.jpg,RFMiD_739,PAT_RFMID_739,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/740.jpg,RFMiD_740,PAT_RFMID_740,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/741.jpg,RFMiD_741,PAT_RFMID_741,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/742.jpg,RFMiD_742,PAT_RFMID_742,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/743.jpg,RFMiD_743,PAT_RFMID_743,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/744.jpg,RFMiD_744,PAT_RFMID_744,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/745.jpg,RFMiD_745,PAT_RFMID_745,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/746.jpg,RFMiD_746,PAT_RFMID_746,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/747.jpg,RFMiD_747,PAT_RFMID_747,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/748.jpg,RFMiD_748,PAT_RFMID_748,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/749.jpg,RFMiD_749,PAT_RFMID_749,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/750.jpg,RFMiD_750,PAT_RFMID_750,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/751.jpg,RFMiD_751,PAT_RFMID_751,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/752.jpg,RFMiD_752,PAT_RFMID_752,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/753.jpg,RFMiD_753,PAT_RFMID_753,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/754.jpg,RFMiD_754,PAT_RFMID_754,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/755.jpg,RFMiD_755,PAT_RFMID_755,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/756.jpg,RFMiD_756,PAT_RFMID_756,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/757.jpg,RFMiD_757,PAT_RFMID_757,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/758.jpg,RFMiD_758,PAT_RFMID_758,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/759.jpg,RFMiD_759,PAT_RFMID_759,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/760.jpg,RFMiD_760,PAT_RFMID_760,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/761.jpg,RFMiD_761,PAT_RFMID_761,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/762.jpg,RFMiD_762,PAT_RFMID_762,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/763.jpg,RFMiD_763,PAT_RFMID_763,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/764.jpg,RFMiD_764,PAT_RFMID_764,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/765.jpg,RFMiD_765,PAT_RFMID_765,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/766.jpg,RFMiD_766,PAT_RFMID_766,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/767.jpg,RFMiD_767,PAT_RFMID_767,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/768.jpg,RFMiD_768,PAT_RFMID_768,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/769.jpg,RFMiD_769,PAT_RFMID_769,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/770.jpg,RFMiD_770,PAT_RFMID_770,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/771.jpg,RFMiD_771,PAT_RFMID_771,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/772.jpg,RFMiD_772,PAT_RFMID_772,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/773.jpg,RFMiD_773,PAT_RFMID_773,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/774.jpg,RFMiD_774,PAT_RFMID_774,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/775.jpg,RFMiD_775,PAT_RFMID_775,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/776.jpg,RFMiD_776,PAT_RFMID_776,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/777.jpg,RFMiD_777,PAT_RFMID_777,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/778.jpg,RFMiD_778,PAT_RFMID_778,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/779.jpg,RFMiD_779,PAT_RFMID_779,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/780.jpg,RFMiD_780,PAT_RFMID_780,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/781.jpg,RFMiD_781,PAT_RFMID_781,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/782.jpg,RFMiD_782,PAT_RFMID_782,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/783.jpg,RFMiD_783,PAT_RFMID_783,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/784.jpg,RFMiD_784,PAT_RFMID_784,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/785.jpg,RFMiD_785,PAT_RFMID_785,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/786.jpg,RFMiD_786,PAT_RFMID_786,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/787.jpg,RFMiD_787,PAT_RFMID_787,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/788.jpg,RFMiD_788,PAT_RFMID_788,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/789.jpg,RFMiD_789,PAT_RFMID_789,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/790.jpg,RFMiD_790,PAT_RFMID_790,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/791.jpg,RFMiD_791,PAT_RFMID_791,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/792.jpg,RFMiD_792,PAT_RFMID_792,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/793.jpg,RFMiD_793,PAT_RFMID_793,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/794.jpg,RFMiD_794,PAT_RFMID_794,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/795.jpg,RFMiD_795,PAT_RFMID_795,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/796.jpg,RFMiD_796,PAT_RFMID_796,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/797.jpg,RFMiD_797,PAT_RFMID_797,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Training_set/798.jpg,RFMiD_798,PAT_RFMID_798,train,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/6.jpg,RFMiD_6,PAT_RFMID_6,val,0,0,0,Non-DR Pathology: MCA,MCA,1,RFMiD_2.0
+data/rfmid/Validation_set/25.jpg,RFMiD_25,PAT_RFMID_25,val,0,0,0,Non-DR Pathology: HPED,HPED,1,RFMiD_2.0
+data/rfmid/Validation_set/65.jpg,RFMiD_65,PAT_RFMID_65,val,0,0,0,"Non-DR Pathology: CME,ERM",CME;ERM,1,RFMiD_2.0
+data/rfmid/Validation_set/97.jpg,RFMiD_97,PAT_RFMID_97,val,0,0,0,Non-DR Pathology: RP,RP,1,RFMiD_2.0
+data/rfmid/Validation_set/120.jpg,RFMiD_120,PAT_RFMID_120,val,0,0,0,Non-DR Pathology: LS,LS,1,RFMiD_2.0
+data/rfmid/Validation_set/131.jpg,RFMiD_131,PAT_RFMID_131,val,0,0,0,Non-DR Pathology: LS,LS,1,RFMiD_2.0
+data/rfmid/Validation_set/181.jpg,RFMiD_181,PAT_RFMID_181,val,0,0,0,"Non-DR Pathology: CSR,ODC",CSR;ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/190.jpg,RFMiD_190,PAT_RFMID_190,val,0,0,0,"Non-DR Pathology: CL,MS",CL;MS,1,RFMiD_2.0
+data/rfmid/Validation_set/191.jpg,RFMiD_191,PAT_RFMID_191,val,0,0,0,"Non-DR Pathology: CL,CME",CL;CME,1,RFMiD_2.0
+data/rfmid/Validation_set/199.jpg,RFMiD_199,PAT_RFMID_199,val,0,0,0,"Non-DR Pathology: MS,ODP",MS;ODP,1,RFMiD_2.0
+data/rfmid/Validation_set/200.jpg,RFMiD_200,PAT_RFMID_200,val,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Validation_set/207.jpg,RFMiD_207,PAT_RFMID_207,val,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Validation_set/210.jpg,RFMiD_210,PAT_RFMID_210,val,0,0,0,"Non-DR Pathology: CME,HR",CME;HR,1,RFMiD_2.0
+data/rfmid/Validation_set/223.jpg,RFMiD_223,PAT_RFMID_223,val,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Validation_set/231.jpg,RFMiD_231,PAT_RFMID_231,val,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Validation_set/232.jpg,RFMiD_232,PAT_RFMID_232,val,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Validation_set/243.jpg,RFMiD_243,PAT_RFMID_243,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/247.jpg,RFMiD_247,PAT_RFMID_247,val,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Validation_set/253.jpg,RFMiD_253,PAT_RFMID_253,val,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Validation_set/254.jpg,RFMiD_254,PAT_RFMID_254,val,0,0,0,"Non-DR Pathology: HR,RT",HR;RT,1,RFMiD_2.0
+data/rfmid/Validation_set/260.jpg,RFMiD_260,PAT_RFMID_260,val,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Validation_set/265.jpg,RFMiD_265,PAT_RFMID_265,val,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Validation_set/267.jpg,RFMiD_267,PAT_RFMID_267,val,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR,1,RFMiD_2.0
+data/rfmid/Validation_set/270.jpg,RFMiD_270,PAT_RFMID_270,val,0,0,0,"Non-DR Pathology: MH,TSLN",MH;TSLN;VS,1,RFMiD_2.0
+data/rfmid/Validation_set/271.jpg,RFMiD_271,PAT_RFMID_271,val,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Validation_set/278.jpg,RFMiD_278,PAT_RFMID_278,val,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Validation_set/280.jpg,RFMiD_280,PAT_RFMID_280,val,0,0,0,"Non-DR Pathology: CF,CRS",CF;CRS,1,RFMiD_2.0
+data/rfmid/Validation_set/281.jpg,RFMiD_281,PAT_RFMID_281,val,0,0,0,"Non-DR Pathology: MH,ODC",MH;ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/283.jpg,RFMiD_283,PAT_RFMID_283,val,0,0,0,"Non-DR Pathology: MH,MYA",MH;MYA;ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/284.jpg,RFMiD_284,PAT_RFMID_284,val,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Validation_set/288.jpg,RFMiD_288,PAT_RFMID_288,val,0,0,0,"Non-DR Pathology: MH,ODE",MH;ODE,1,RFMiD_2.0
+data/rfmid/Validation_set/289.jpg,RFMiD_289,PAT_RFMID_289,val,0,0,0,"Non-DR Pathology: MH,MS",MH;MS,1,RFMiD_2.0
+data/rfmid/Validation_set/290.jpg,RFMiD_290,PAT_RFMID_290,val,0,0,0,"Non-DR Pathology: CRVO,CWS",CRVO;CWS;HR;MH,1,RFMiD_2.0
+data/rfmid/Validation_set/293.jpg,RFMiD_293,PAT_RFMID_293,val,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Validation_set/294.jpg,RFMiD_294,PAT_RFMID_294,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/296.jpg,RFMiD_296,PAT_RFMID_296,val,0,0,0,"Non-DR Pathology: ARMD,MYA",ARMD;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Validation_set/299.jpg,RFMiD_299,PAT_RFMID_299,val,0,0,0,"Non-DR Pathology: CRS,MS",CRS;MS,1,RFMiD_2.0
+data/rfmid/Validation_set/303.jpg,RFMiD_303,PAT_RFMID_303,val,0,0,0,"Non-DR Pathology: RD,RT",RD;RT,1,RFMiD_2.0
+data/rfmid/Validation_set/305.jpg,RFMiD_305,PAT_RFMID_305,val,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/306.jpg,RFMiD_306,PAT_RFMID_306,val,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Validation_set/311.jpg,RFMiD_311,PAT_RFMID_311,val,0,0,0,Non-DR Pathology: CWS,CWS,1,RFMiD_2.0
+data/rfmid/Validation_set/313.jpg,RFMiD_313,PAT_RFMID_313,val,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Validation_set/325.jpg,RFMiD_325,PAT_RFMID_325,val,0,0,0,"Non-DR Pathology: PRH,RT",PRH;RT,1,RFMiD_2.0
+data/rfmid/Validation_set/326.jpg,RFMiD_326,PAT_RFMID_326,val,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Validation_set/332.jpg,RFMiD_332,PAT_RFMID_332,val,0,0,0,Non-DR Pathology: ST,ST,1,RFMiD_2.0
+data/rfmid/Validation_set/334.jpg,RFMiD_334,PAT_RFMID_334,val,0,0,0,"Non-DR Pathology: HR,ODC",HR;ODC;RT,1,RFMiD_2.0
+data/rfmid/Validation_set/338.jpg,RFMiD_338,PAT_RFMID_338,val,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/340.jpg,RFMiD_340,PAT_RFMID_340,val,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/341.jpg,RFMiD_341,PAT_RFMID_341,val,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/345.jpg,RFMiD_345,PAT_RFMID_345,val,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/347.jpg,RFMiD_347,PAT_RFMID_347,val,0,0,0,Non-DR Pathology: DN,DN,1,RFMiD_2.0
+data/rfmid/Validation_set/349.jpg,RFMiD_349,PAT_RFMID_349,val,0,0,0,Non-DR Pathology: ODE,ODE,1,RFMiD_2.0
+data/rfmid/Validation_set/350.jpg,RFMiD_350,PAT_RFMID_350,val,0,0,0,Non-DR Pathology: ODE,ODE,1,RFMiD_2.0
+data/rfmid/Validation_set/351.jpg,RFMiD_351,PAT_RFMID_351,val,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/352.jpg,RFMiD_352,PAT_RFMID_352,val,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Validation_set/354.jpg,RFMiD_354,PAT_RFMID_354,val,0,0,0,"Non-DR Pathology: CF,EDN",CF;EDN;ME;RT,1,RFMiD_2.0
+data/rfmid/Validation_set/357.jpg,RFMiD_357,PAT_RFMID_357,val,0,0,0,"Non-DR Pathology: CF,CRS",CF;CRS;ODE,1,RFMiD_2.0
+data/rfmid/Validation_set/359.jpg,RFMiD_359,PAT_RFMID_359,val,0,0,0,Non-DR Pathology: CB,CB,1,RFMiD_2.0
+data/rfmid/Validation_set/365.jpg,RFMiD_365,PAT_RFMID_365,val,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Validation_set/368.jpg,RFMiD_368,PAT_RFMID_368,val,0,0,0,Non-DR Pathology: ODE,ODE,1,RFMiD_2.0
+data/rfmid/Validation_set/373.jpg,RFMiD_373,PAT_RFMID_373,val,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Validation_set/374.jpg,RFMiD_374,PAT_RFMID_374,val,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Validation_set/375.jpg,RFMiD_375,PAT_RFMID_375,val,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Validation_set/380.jpg,RFMiD_380,PAT_RFMID_380,val,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/383.jpg,RFMiD_383,PAT_RFMID_383,val,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Validation_set/387.jpg,RFMiD_387,PAT_RFMID_387,val,0,0,0,Non-DR Pathology: ARMD,ARMD,1,RFMiD_2.0
+data/rfmid/Validation_set/388.jpg,RFMiD_388,PAT_RFMID_388,val,0,0,0,Non-DR Pathology: ARMD,ARMD,1,RFMiD_2.0
+data/rfmid/Validation_set/393.jpg,RFMiD_393,PAT_RFMID_393,val,0,0,0,"Non-DR Pathology: BRVO,EDN",BRVO;EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/395.jpg,RFMiD_395,PAT_RFMID_395,val,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/398.jpg,RFMiD_398,PAT_RFMID_398,val,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/400.jpg,RFMiD_400,PAT_RFMID_400,val,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/407.jpg,RFMiD_407,PAT_RFMID_407,val,0,0,0,Non-DR Pathology: MHL,MHL,1,RFMiD_2.0
+data/rfmid/Validation_set/417.jpg,RFMiD_417,PAT_RFMID_417,val,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Validation_set/418.jpg,RFMiD_418,PAT_RFMID_418,val,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/421.jpg,RFMiD_421,PAT_RFMID_421,val,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Validation_set/423.jpg,RFMiD_423,PAT_RFMID_423,val,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Validation_set/425.jpg,RFMiD_425,PAT_RFMID_425,val,0,0,0,Non-DR Pathology: MHL,MHL,1,RFMiD_2.0
+data/rfmid/Validation_set/437.jpg,RFMiD_437,PAT_RFMID_437,val,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Validation_set/439.jpg,RFMiD_439,PAT_RFMID_439,val,0,0,0,Non-DR Pathology: AION,AION,1,RFMiD_2.0
+data/rfmid/Validation_set/445.jpg,RFMiD_445,PAT_RFMID_445,val,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN,1,RFMiD_2.0
+data/rfmid/Validation_set/446.jpg,RFMiD_446,PAT_RFMID_446,val,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Validation_set/447.jpg,RFMiD_447,PAT_RFMID_447,val,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Validation_set/448.jpg,RFMiD_448,PAT_RFMID_448,val,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Validation_set/449.jpg,RFMiD_449,PAT_RFMID_449,val,0,0,0,Non-DR Pathology: RS,RS,1,RFMiD_2.0
+data/rfmid/Validation_set/451.jpg,RFMiD_451,PAT_RFMID_451,val,0,0,0,Non-DR Pathology: SOFE,SOFE,1,RFMiD_2.0
+data/rfmid/Validation_set/453.jpg,RFMiD_453,PAT_RFMID_453,val,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Validation_set/456.jpg,RFMiD_456,PAT_RFMID_456,val,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Validation_set/459.jpg,RFMiD_459,PAT_RFMID_459,val,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Validation_set/462.jpg,RFMiD_462,PAT_RFMID_462,val,0,0,0,"Non-DR Pathology: TSLN,TV",TSLN;TV,1,RFMiD_2.0
+data/rfmid/Validation_set/464.jpg,RFMiD_464,PAT_RFMID_464,val,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Validation_set/469.jpg,RFMiD_469,PAT_RFMID_469,val,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Validation_set/474.jpg,RFMiD_474,PAT_RFMID_474,val,0,0,0,"Non-DR Pathology: TD,TSLN",TD;TSLN,1,RFMiD_2.0
+data/rfmid/Validation_set/476.jpg,RFMiD_476,PAT_RFMID_476,val,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Validation_set/480.jpg,RFMiD_480,PAT_RFMID_480,val,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Validation_set/484.jpg,RFMiD_484,PAT_RFMID_484,val,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Validation_set/490.jpg,RFMiD_490,PAT_RFMID_490,val,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR;PRH,1,RFMiD_2.0
+data/rfmid/Validation_set/491.jpg,RFMiD_491,PAT_RFMID_491,val,0,0,0,"Non-DR Pathology: MS,MYA",MS;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Validation_set/494.jpg,RFMiD_494,PAT_RFMID_494,val,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Validation_set/495.jpg,RFMiD_495,PAT_RFMID_495,val,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Validation_set/521.jpg,RFMiD_521,PAT_RFMID_521,val,0,0,0,"Non-DR Pathology: MYA,RPEC",MYA;RPEC;TSLN,1,RFMiD_2.0
+data/rfmid/Validation_set/530.jpg,RFMiD_530,PAT_RFMID_530,val,0,0,0,"Non-DR Pathology: BRVO,CWS",BRVO;CWS,1,RFMiD_2.0
+data/rfmid/Validation_set/532.jpg,RFMiD_532,PAT_RFMID_532,val,0,0,0,Non-DR Pathology: RS,RS,1,RFMiD_2.0
+data/rfmid/Validation_set/537.jpg,RFMiD_537,PAT_RFMID_537,val,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Validation_set/538.jpg,RFMiD_538,PAT_RFMID_538,val,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Validation_set/540.jpg,RFMiD_540,PAT_RFMID_540,val,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Validation_set/561.jpg,RFMiD_561,PAT_RFMID_561,val,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Validation_set/562.jpg,RFMiD_562,PAT_RFMID_562,val,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Validation_set/563.jpg,RFMiD_563,PAT_RFMID_563,val,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Validation_set/575.jpg,RFMiD_575,PAT_RFMID_575,val,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Validation_set/576.jpg,RFMiD_576,PAT_RFMID_576,val,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Validation_set/582.jpg,RFMiD_582,PAT_RFMID_582,val,0,0,0,Non-DR Pathology: IIH,IIH,1,RFMiD_2.0
+data/rfmid/Validation_set/583.jpg,RFMiD_583,PAT_RFMID_583,val,0,0,0,Non-DR Pathology: IIH,IIH,1,RFMiD_2.0
+data/rfmid/Validation_set/627.jpg,RFMiD_627,PAT_RFMID_627,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/628.jpg,RFMiD_628,PAT_RFMID_628,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/629.jpg,RFMiD_629,PAT_RFMID_629,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/630.jpg,RFMiD_630,PAT_RFMID_630,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/631.jpg,RFMiD_631,PAT_RFMID_631,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/632.jpg,RFMiD_632,PAT_RFMID_632,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/633.jpg,RFMiD_633,PAT_RFMID_633,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/634.jpg,RFMiD_634,PAT_RFMID_634,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/635.jpg,RFMiD_635,PAT_RFMID_635,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/636.jpg,RFMiD_636,PAT_RFMID_636,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/637.jpg,RFMiD_637,PAT_RFMID_637,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/638.jpg,RFMiD_638,PAT_RFMID_638,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/639.jpg,RFMiD_639,PAT_RFMID_639,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/640.jpg,RFMiD_640,PAT_RFMID_640,val,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Validation_set/799.jpg,RFMiD_799,PAT_RFMID_799,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/800.jpg,RFMiD_800,PAT_RFMID_800,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/801.jpg,RFMiD_801,PAT_RFMID_801,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/802.jpg,RFMiD_802,PAT_RFMID_802,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/803.jpg,RFMiD_803,PAT_RFMID_803,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/804.jpg,RFMiD_804,PAT_RFMID_804,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/805.jpg,RFMiD_805,PAT_RFMID_805,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/806.jpg,RFMiD_806,PAT_RFMID_806,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/807.jpg,RFMiD_807,PAT_RFMID_807,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/808.jpg,RFMiD_808,PAT_RFMID_808,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/809.jpg,RFMiD_809,PAT_RFMID_809,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/810.jpg,RFMiD_810,PAT_RFMID_810,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/811.jpg,RFMiD_811,PAT_RFMID_811,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/812.jpg,RFMiD_812,PAT_RFMID_812,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/813.jpg,RFMiD_813,PAT_RFMID_813,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/814.jpg,RFMiD_814,PAT_RFMID_814,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/815.jpg,RFMiD_815,PAT_RFMID_815,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/816.jpg,RFMiD_816,PAT_RFMID_816,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/817.jpg,RFMiD_817,PAT_RFMID_817,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/818.jpg,RFMiD_818,PAT_RFMID_818,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/819.jpg,RFMiD_819,PAT_RFMID_819,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/820.jpg,RFMiD_820,PAT_RFMID_820,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/821.jpg,RFMiD_821,PAT_RFMID_821,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/822.jpg,RFMiD_822,PAT_RFMID_822,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/823.jpg,RFMiD_823,PAT_RFMID_823,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/824.jpg,RFMiD_824,PAT_RFMID_824,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/825.jpg,RFMiD_825,PAT_RFMID_825,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/826.jpg,RFMiD_826,PAT_RFMID_826,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/827.jpg,RFMiD_827,PAT_RFMID_827,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/828.jpg,RFMiD_828,PAT_RFMID_828,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/829.jpg,RFMiD_829,PAT_RFMID_829,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/830.jpg,RFMiD_830,PAT_RFMID_830,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/831.jpg,RFMiD_831,PAT_RFMID_831,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/832.jpg,RFMiD_832,PAT_RFMID_832,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/833.jpg,RFMiD_833,PAT_RFMID_833,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/834.jpg,RFMiD_834,PAT_RFMID_834,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/835.jpg,RFMiD_835,PAT_RFMID_835,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/836.jpg,RFMiD_836,PAT_RFMID_836,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/837.jpg,RFMiD_837,PAT_RFMID_837,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/838.jpg,RFMiD_838,PAT_RFMID_838,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/839.jpg,RFMiD_839,PAT_RFMID_839,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/840.jpg,RFMiD_840,PAT_RFMID_840,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/841.jpg,RFMiD_841,PAT_RFMID_841,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/842.jpg,RFMiD_842,PAT_RFMID_842,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/843.jpg,RFMiD_843,PAT_RFMID_843,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/844.jpg,RFMiD_844,PAT_RFMID_844,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/845.jpg,RFMiD_845,PAT_RFMID_845,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/846.jpg,RFMiD_846,PAT_RFMID_846,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/847.jpg,RFMiD_847,PAT_RFMID_847,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/848.jpg,RFMiD_848,PAT_RFMID_848,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Validation_set/849.jpg,RFMiD_849,PAT_RFMID_849,val,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/167.jpg,RFMiD_167,PAT_RFMID_167,test,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR;LS;MCA,1,RFMiD_2.0
+data/rfmid/Test_set/189.jpg,RFMiD_189,PAT_RFMID_189,test,0,0,0,"Non-DR Pathology: ODE,TSLN",ODE;TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/201.jpg,RFMiD_201,PAT_RFMID_201,test,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN;LS,1,RFMiD_2.0
+data/rfmid/Test_set/216.jpg,RFMiD_216,PAT_RFMID_216,test,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Test_set/220.jpg,RFMiD_220,PAT_RFMID_220,test,0,0,0,"Non-DR Pathology: EDN,MS",EDN;MS,1,RFMiD_2.0
+data/rfmid/Test_set/228.jpg,RFMiD_228,PAT_RFMID_228,test,0,0,0,Non-DR Pathology: RP,RP,1,RFMiD_2.0
+data/rfmid/Test_set/233.jpg,RFMiD_233,PAT_RFMID_233,test,0,0,0,"Non-DR Pathology: CME,HR",CME;HR,1,RFMiD_2.0
+data/rfmid/Test_set/239.jpg,RFMiD_239,PAT_RFMID_239,test,0,0,0,"Non-DR Pathology: CME,EDN",CME;EDN;HR,1,RFMiD_2.0
+data/rfmid/Test_set/252.jpg,RFMiD_252,PAT_RFMID_252,test,0,0,0,Non-DR Pathology: CME,CME,1,RFMiD_2.0
+data/rfmid/Test_set/255.jpg,RFMiD_255,PAT_RFMID_255,test,0,0,0,"Non-DR Pathology: CRS,HPED",CRS;HPED;MH;MS,1,RFMiD_2.0
+data/rfmid/Test_set/256.jpg,RFMiD_256,PAT_RFMID_256,test,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Test_set/262.jpg,RFMiD_262,PAT_RFMID_262,test,0,0,0,"Non-DR Pathology: CME,VS",CME;VS,1,RFMiD_2.0
+data/rfmid/Test_set/269.jpg,RFMiD_269,PAT_RFMID_269,test,0,0,0,"Non-DR Pathology: CME,CSR",CME;CSR,1,RFMiD_2.0
+data/rfmid/Test_set/287.jpg,RFMiD_287,PAT_RFMID_287,test,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR;MH,1,RFMiD_2.0
+data/rfmid/Test_set/292.jpg,RFMiD_292,PAT_RFMID_292,test,0,0,0,"Non-DR Pathology: EDN,MCA",EDN;MCA,1,RFMiD_2.0
+data/rfmid/Test_set/295.jpg,RFMiD_295,PAT_RFMID_295,test,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Test_set/297.jpg,RFMiD_297,PAT_RFMID_297,test,0,0,0,"Non-DR Pathology: MH,PRH",MH;PRH,1,RFMiD_2.0
+data/rfmid/Test_set/298.jpg,RFMiD_298,PAT_RFMID_298,test,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Test_set/304.jpg,RFMiD_304,PAT_RFMID_304,test,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Test_set/322.jpg,RFMiD_322,PAT_RFMID_322,test,0,0,0,"Non-DR Pathology: HR,PRH",HR;PRH;RT,1,RFMiD_2.0
+data/rfmid/Test_set/343.jpg,RFMiD_343,PAT_RFMID_343,test,0,0,0,Non-DR Pathology: RTR,RTR,1,RFMiD_2.0
+data/rfmid/Test_set/348.jpg,RFMiD_348,PAT_RFMID_348,test,0,0,0,Non-DR Pathology: DN,DN,1,RFMiD_2.0
+data/rfmid/Test_set/356.jpg,RFMiD_356,PAT_RFMID_356,test,0,0,0,"Non-DR Pathology: HR,PRH",HR;PRH,1,RFMiD_2.0
+data/rfmid/Test_set/366.jpg,RFMiD_366,PAT_RFMID_366,test,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Test_set/370.jpg,RFMiD_370,PAT_RFMID_370,test,0,0,0,"Non-DR Pathology: HR,RT",HR;RT,1,RFMiD_2.0
+data/rfmid/Test_set/371.jpg,RFMiD_371,PAT_RFMID_371,test,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Test_set/376.jpg,RFMiD_376,PAT_RFMID_376,test,0,0,0,"Non-DR Pathology: HR,PRH",HR;PRH,1,RFMiD_2.0
+data/rfmid/Test_set/378.jpg,RFMiD_378,PAT_RFMID_378,test,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Test_set/381.jpg,RFMiD_381,PAT_RFMID_381,test,0,0,0,"Non-DR Pathology: CWS,HR",CWS;HR,1,RFMiD_2.0
+data/rfmid/Test_set/384.jpg,RFMiD_384,PAT_RFMID_384,test,0,0,0,"Non-DR Pathology: CME,CRS",CME;CRS,1,RFMiD_2.0
+data/rfmid/Test_set/385.jpg,RFMiD_385,PAT_RFMID_385,test,0,0,0,"Non-DR Pathology: ODE,TV",ODE;TV,1,RFMiD_2.0
+data/rfmid/Test_set/386.jpg,RFMiD_386,PAT_RFMID_386,test,0,0,0,"Non-DR Pathology: ODE,TV",ODE;TV,1,RFMiD_2.0
+data/rfmid/Test_set/389.jpg,RFMiD_389,PAT_RFMID_389,test,0,0,0,Non-DR Pathology: ARMD,ARMD,1,RFMiD_2.0
+data/rfmid/Test_set/390.jpg,RFMiD_390,PAT_RFMID_390,test,0,0,0,Non-DR Pathology: ARMD,ARMD,1,RFMiD_2.0
+data/rfmid/Test_set/392.jpg,RFMiD_392,PAT_RFMID_392,test,0,0,0,Non-DR Pathology: CB,CB,1,RFMiD_2.0
+data/rfmid/Test_set/409.jpg,RFMiD_409,PAT_RFMID_409,test,0,0,0,Non-DR Pathology: ST,ST,1,RFMiD_2.0
+data/rfmid/Test_set/419.jpg,RFMiD_419,PAT_RFMID_419,test,0,0,0,Non-DR Pathology: MH,MH,1,RFMiD_2.0
+data/rfmid/Test_set/424.jpg,RFMiD_424,PAT_RFMID_424,test,0,0,0,"Non-DR Pathology: EDN,MH",EDN;MH,1,RFMiD_2.0
+data/rfmid/Test_set/426.jpg,RFMiD_426,PAT_RFMID_426,test,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Test_set/428.jpg,RFMiD_428,PAT_RFMID_428,test,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN,1,RFMiD_2.0
+data/rfmid/Test_set/432.jpg,RFMiD_432,PAT_RFMID_432,test,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Test_set/435.jpg,RFMiD_435,PAT_RFMID_435,test,0,0,0,"Non-DR Pathology: EDN,ON",EDN;ON,1,RFMiD_2.0
+data/rfmid/Test_set/440.jpg,RFMiD_440,PAT_RFMID_440,test,0,0,0,Non-DR Pathology: MHL,MHL,1,RFMiD_2.0
+data/rfmid/Test_set/441.jpg,RFMiD_441,PAT_RFMID_441,test,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Test_set/455.jpg,RFMiD_455,PAT_RFMID_455,test,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Test_set/465.jpg,RFMiD_465,PAT_RFMID_465,test,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR;ME,1,RFMiD_2.0
+data/rfmid/Test_set/466.jpg,RFMiD_466,PAT_RFMID_466,test,0,0,0,"Non-DR Pathology: CWS,EDN",CWS;EDN;HR;ME,1,RFMiD_2.0
+data/rfmid/Test_set/468.jpg,RFMiD_468,PAT_RFMID_468,test,0,0,0,"Non-DR Pathology: EDN,HR",EDN;HR,1,RFMiD_2.0
+data/rfmid/Test_set/470.jpg,RFMiD_470,PAT_RFMID_470,test,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Test_set/471.jpg,RFMiD_471,PAT_RFMID_471,test,0,0,0,"Non-DR Pathology: ODC,TSLN",ODC;TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/477.jpg,RFMiD_477,PAT_RFMID_477,test,0,0,0,"Non-DR Pathology: CF,MS",CF;MS,1,RFMiD_2.0
+data/rfmid/Test_set/478.jpg,RFMiD_478,PAT_RFMID_478,test,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Test_set/479.jpg,RFMiD_479,PAT_RFMID_479,test,0,0,0,"Non-DR Pathology: HR,ODC",HR;ODC,1,RFMiD_2.0
+data/rfmid/Test_set/482.jpg,RFMiD_482,PAT_RFMID_482,test,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Test_set/483.jpg,RFMiD_483,PAT_RFMID_483,test,0,0,0,Non-DR Pathology: CSR,CSR,1,RFMiD_2.0
+data/rfmid/Test_set/486.jpg,RFMiD_486,PAT_RFMID_486,test,0,0,0,"Non-DR Pathology: CNV,MYA",CNV;MYA,1,RFMiD_2.0
+data/rfmid/Test_set/488.jpg,RFMiD_488,PAT_RFMID_488,test,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Test_set/492.jpg,RFMiD_492,PAT_RFMID_492,test,0,0,0,"Non-DR Pathology: MS,MYA",MS;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/493.jpg,RFMiD_493,PAT_RFMID_493,test,0,0,0,"Non-DR Pathology: MS,MYA",MS;MYA;TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/496.jpg,RFMiD_496,PAT_RFMID_496,test,0,0,0,Non-DR Pathology: AION,AION,1,RFMiD_2.0
+data/rfmid/Test_set/497.jpg,RFMiD_497,PAT_RFMID_497,test,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Test_set/500.jpg,RFMiD_500,PAT_RFMID_500,test,0,0,0,Non-DR Pathology: MYA,MYA,1,RFMiD_2.0
+data/rfmid/Test_set/501.jpg,RFMiD_501,PAT_RFMID_501,test,0,0,0,Non-DR Pathology: RD,RD,1,RFMiD_2.0
+data/rfmid/Test_set/505.jpg,RFMiD_505,PAT_RFMID_505,test,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Test_set/506.jpg,RFMiD_506,PAT_RFMID_506,test,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Test_set/508.jpg,RFMiD_508,PAT_RFMID_508,test,0,0,0,Non-DR Pathology: RT,RT,1,RFMiD_2.0
+data/rfmid/Test_set/509.jpg,RFMiD_509,PAT_RFMID_509,test,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Test_set/510.jpg,RFMiD_510,PAT_RFMID_510,test,0,0,0,Non-DR Pathology: EDN,EDN,1,RFMiD_2.0
+data/rfmid/Test_set/511.jpg,RFMiD_511,PAT_RFMID_511,test,0,0,0,"Non-DR Pathology: TD,TSLN",TD;TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/513.jpg,RFMiD_513,PAT_RFMID_513,test,0,0,0,Non-DR Pathology: HR,HR,1,RFMiD_2.0
+data/rfmid/Test_set/514.jpg,RFMiD_514,PAT_RFMID_514,test,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/516.jpg,RFMiD_516,PAT_RFMID_516,test,0,0,0,Non-DR Pathology: TSLN,TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/517.jpg,RFMiD_517,PAT_RFMID_517,test,0,0,0,Non-DR Pathology: CRVO,CRVO,1,RFMiD_2.0
+data/rfmid/Test_set/522.jpg,RFMiD_522,PAT_RFMID_522,test,0,0,0,"Non-DR Pathology: MYA,RPEC",MYA;RPEC;TSLN,1,RFMiD_2.0
+data/rfmid/Test_set/524.jpg,RFMiD_524,PAT_RFMID_524,test,0,0,0,"Non-DR Pathology: BRVO,CWS",BRVO;CWS,1,RFMiD_2.0
+data/rfmid/Test_set/527.jpg,RFMiD_527,PAT_RFMID_527,test,0,0,0,Non-DR Pathology: TD,TD,1,RFMiD_2.0
+data/rfmid/Test_set/528.jpg,RFMiD_528,PAT_RFMID_528,test,0,0,0,Non-DR Pathology: VS,VS,1,RFMiD_2.0
+data/rfmid/Test_set/531.jpg,RFMiD_531,PAT_RFMID_531,test,0,0,0,Non-DR Pathology: SOFE,SOFE,1,RFMiD_2.0
+data/rfmid/Test_set/533.jpg,RFMiD_533,PAT_RFMID_533,test,0,0,0,"Non-DR Pathology: EDN,RS",EDN;RS,1,RFMiD_2.0
+data/rfmid/Test_set/534.jpg,RFMiD_534,PAT_RFMID_534,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/535.jpg,RFMiD_535,PAT_RFMID_535,test,0,0,0,Non-DR Pathology: MS,MS,1,RFMiD_2.0
+data/rfmid/Test_set/536.jpg,RFMiD_536,PAT_RFMID_536,test,0,0,0,Non-DR Pathology: ODE,ODE,1,RFMiD_2.0
+data/rfmid/Test_set/539.jpg,RFMiD_539,PAT_RFMID_539,test,0,0,0,"Non-DR Pathology: EDN,TV",EDN;TV,1,RFMiD_2.0
+data/rfmid/Test_set/541.jpg,RFMiD_541,PAT_RFMID_541,test,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Test_set/542.jpg,RFMiD_542,PAT_RFMID_542,test,0,0,0,Non-DR Pathology: TV,TV,1,RFMiD_2.0
+data/rfmid/Test_set/543.jpg,RFMiD_543,PAT_RFMID_543,test,0,0,0,"Non-DR Pathology: ERM,ODP",ERM;ODP,1,RFMiD_2.0
+data/rfmid/Test_set/544.jpg,RFMiD_544,PAT_RFMID_544,test,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Test_set/545.jpg,RFMiD_545,PAT_RFMID_545,test,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Test_set/546.jpg,RFMiD_546,PAT_RFMID_546,test,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Test_set/547.jpg,RFMiD_547,PAT_RFMID_547,test,0,0,0,Non-DR Pathology: ODC,ODC,1,RFMiD_2.0
+data/rfmid/Test_set/548.jpg,RFMiD_548,PAT_RFMID_548,test,0,0,0,"Non-DR Pathology: ODP,TV",ODP;TV,1,RFMiD_2.0
+data/rfmid/Test_set/550.jpg,RFMiD_550,PAT_RFMID_550,test,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Test_set/551.jpg,RFMiD_551,PAT_RFMID_551,test,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Test_set/552.jpg,RFMiD_552,PAT_RFMID_552,test,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Test_set/554.jpg,RFMiD_554,PAT_RFMID_554,test,0,0,0,Non-DR Pathology: CRS,CRS,1,RFMiD_2.0
+data/rfmid/Test_set/555.jpg,RFMiD_555,PAT_RFMID_555,test,0,0,0,Non-DR Pathology: ODP,ODP,1,RFMiD_2.0
+data/rfmid/Test_set/559.jpg,RFMiD_559,PAT_RFMID_559,test,0,0,0,Non-DR Pathology: AH,AH,1,RFMiD_2.0
+data/rfmid/Test_set/560.jpg,RFMiD_560,PAT_RFMID_560,test,0,0,0,"Non-DR Pathology: CWS,HR",CWS;HR,1,RFMiD_2.0
+data/rfmid/Test_set/564.jpg,RFMiD_564,PAT_RFMID_564,test,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Test_set/565.jpg,RFMiD_565,PAT_RFMID_565,test,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Test_set/566.jpg,RFMiD_566,PAT_RFMID_566,test,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Test_set/567.jpg,RFMiD_567,PAT_RFMID_567,test,0,0,0,Non-DR Pathology: BRVO,BRVO,1,RFMiD_2.0
+data/rfmid/Test_set/577.jpg,RFMiD_577,PAT_RFMID_577,test,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Test_set/578.jpg,RFMiD_578,PAT_RFMID_578,test,0,0,0,Non-DR Pathology: HTN,HTN,1,RFMiD_2.0
+data/rfmid/Test_set/584.jpg,RFMiD_584,PAT_RFMID_584,test,0,0,0,Non-DR Pathology: IIH,IIH,1,RFMiD_2.0
+data/rfmid/Test_set/641.jpg,RFMiD_641,PAT_RFMID_641,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/642.jpg,RFMiD_642,PAT_RFMID_642,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/643.jpg,RFMiD_643,PAT_RFMID_643,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/644.jpg,RFMiD_644,PAT_RFMID_644,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/645.jpg,RFMiD_645,PAT_RFMID_645,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/646.jpg,RFMiD_646,PAT_RFMID_646,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/647.jpg,RFMiD_647,PAT_RFMID_647,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/648.jpg,RFMiD_648,PAT_RFMID_648,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/649.jpg,RFMiD_649,PAT_RFMID_649,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/650.jpg,RFMiD_650,PAT_RFMID_650,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/651.jpg,RFMiD_651,PAT_RFMID_651,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/652.jpg,RFMiD_652,PAT_RFMID_652,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/653.jpg,RFMiD_653,PAT_RFMID_653,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/654.jpg,RFMiD_654,PAT_RFMID_654,test,2,1,0,Moderate NPDR (Referable),,1,RFMiD_2.0
+data/rfmid/Test_set/850.jpg,RFMiD_850,PAT_RFMID_850,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/851.jpg,RFMiD_851,PAT_RFMID_851,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/852.jpg,RFMiD_852,PAT_RFMID_852,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/853.jpg,RFMiD_853,PAT_RFMID_853,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/854.jpg,RFMiD_854,PAT_RFMID_854,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/855.jpg,RFMiD_855,PAT_RFMID_855,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/856.jpg,RFMiD_856,PAT_RFMID_856,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/857.jpg,RFMiD_857,PAT_RFMID_857,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/858.jpg,RFMiD_858,PAT_RFMID_858,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/859.jpg,RFMiD_859,PAT_RFMID_859,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/860.jpg,RFMiD_860,PAT_RFMID_860,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/861.jpg,RFMiD_861,PAT_RFMID_861,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/862.jpg,RFMiD_862,PAT_RFMID_862,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/863.jpg,RFMiD_863,PAT_RFMID_863,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/864.jpg,RFMiD_864,PAT_RFMID_864,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/865.jpg,RFMiD_865,PAT_RFMID_865,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/866.jpg,RFMiD_866,PAT_RFMID_866,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/867.jpg,RFMiD_867,PAT_RFMID_867,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/868.jpg,RFMiD_868,PAT_RFMID_868,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/869.jpg,RFMiD_869,PAT_RFMID_869,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/870.jpg,RFMiD_870,PAT_RFMID_870,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/871.jpg,RFMiD_871,PAT_RFMID_871,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/872.jpg,RFMiD_872,PAT_RFMID_872,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/873.jpg,RFMiD_873,PAT_RFMID_873,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/874.jpg,RFMiD_874,PAT_RFMID_874,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/875.jpg,RFMiD_875,PAT_RFMID_875,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/876.jpg,RFMiD_876,PAT_RFMID_876,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/877.jpg,RFMiD_877,PAT_RFMID_877,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/878.jpg,RFMiD_878,PAT_RFMID_878,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/879.jpg,RFMiD_879,PAT_RFMID_879,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/880.jpg,RFMiD_880,PAT_RFMID_880,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/881.jpg,RFMiD_881,PAT_RFMID_881,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/882.jpg,RFMiD_882,PAT_RFMID_882,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/883.jpg,RFMiD_883,PAT_RFMID_883,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/884.jpg,RFMiD_884,PAT_RFMID_884,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/885.jpg,RFMiD_885,PAT_RFMID_885,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/886.jpg,RFMiD_886,PAT_RFMID_886,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/887.jpg,RFMiD_887,PAT_RFMID_887,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/888.jpg,RFMiD_888,PAT_RFMID_888,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/889.jpg,RFMiD_889,PAT_RFMID_889,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/890.jpg,RFMiD_890,PAT_RFMID_890,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/891.jpg,RFMiD_891,PAT_RFMID_891,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/892.jpg,RFMiD_892,PAT_RFMID_892,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/893.jpg,RFMiD_893,PAT_RFMID_893,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/894.jpg,RFMiD_894,PAT_RFMID_894,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/895.jpg,RFMiD_895,PAT_RFMID_895,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/896.jpg,RFMiD_896,PAT_RFMID_896,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/897.jpg,RFMiD_897,PAT_RFMID_897,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/898.jpg,RFMiD_898,PAT_RFMID_898,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/899.jpg,RFMiD_899,PAT_RFMID_899,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0
+data/rfmid/Test_set/900.jpg,RFMiD_900,PAT_RFMID_900,test,0,0,1,No DR (Normal Retina),,0,RFMiD_2.0

@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="quantum-dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Quantum-Enhanced Diabetic Retinopathy Screening{% endblock %}</title>
+    
+    <!-- Instant theme initialization to eliminate flash of unstyled content -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('q_retina_theme') || 'quantum-dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +23,76 @@
     <header class="app-header">
         <div class="header-container">
             <div class="logo-area">
-                <span class="logo-icon">🔬⚛️</span>
-                <div>
-                    <h1 class="logo-title">Q-RetinaScreen</h1>
-                    <span class="logo-subtitle">Quantum-Enhanced Diabetic Retinopathy Screening Aid</span>
+                <a href="{{ url_for('index') }}" class="brand-link">
+                    <span class="logo-icon">🔬⚛️</span>
+                    <div>
+                        <h1 class="logo-title">Q-RetinaScreen</h1>
+                        <span class="logo-subtitle">Quantum-Enhanced Diabetic Retinopathy & Eye Health Aid</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Header Controls: System Status, Theme Toggle & User Info -->
+            <div class="header-controls">
+                <!-- System Status Pill -->
+                <div class="system-status-pill" title="PennyLane 4-Qubit Simulator & PyTorch Backbone Ready">
+                    <span class="status-dot"></span>
+                    <span class="status-text">4-Qubit VQC Active</span>
                 </div>
+
+                <!-- Theme Selector Dropdown -->
+                <div class="theme-selector-container">
+                    <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Select Theme" title="Switch Visual Theme">
+                        <span class="theme-icon" id="themeIcon">🌙</span>
+                        <span class="theme-label" id="themeLabel">Quantum Dark</span>
+                        <span class="theme-caret">▾</span>
+                    </button>
+                    <div class="theme-dropdown hidden" id="themeDropdown">
+                        <div class="theme-dropdown-header">Visual Atmosphere</div>
+                        <button type="button" class="theme-option" data-theme="quantum-dark">
+                            <span class="opt-icon">🌙</span>
+                            <div class="opt-text">
+                                <span class="opt-title">Quantum Dark</span>
+                                <span class="opt-sub">Deep Obsidian & Electric Cyan</span>
+                            </div>
+                        </button>
+                        <button type="button" class="theme-option" data-theme="clinical-light">
+                            <span class="opt-icon">☀️</span>
+                            <div class="opt-text">
+                                <span class="opt-title">Clinical Light</span>
+                                <span class="opt-sub">Hospital & Day Mode White</span>
+                            </div>
+                        </button>
+                        <button type="button" class="theme-option" data-theme="midnight-oled">
+                            <span class="opt-icon">🌌</span>
+                            <div class="opt-text">
+                                <span class="opt-title">Midnight OLED</span>
+                                <span class="opt-sub">Pure Black & High Contrast</span>
+                            </div>
+                        </button>
+                        <button type="button" class="theme-option" data-theme="nordic-emerald">
+                            <span class="opt-icon">🌿</span>
+                            <div class="opt-text">
+                                <span class="opt-title">Nordic Emerald</span>
+                                <span class="opt-sub">Eye-Rest Mint & Slate</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                {% if session.get('user') %}
+                <div class="user-area">
+                    <span class="role-badge role-{{ session['user']['role'] }}">{{ session['user']['role'] | upper }}</span>
+                    <span class="user-name">{{ session['user']['name'] }}</span>
+                    <a href="{{ url_for('logout') }}" class="btn-logout" id="logoutBtn" title="Secure Logout">Sign Out</a>
+                </div>
+                {% endif %}
             </div>
-            {% if session.get('user') %}
-            <div class="user-area">
-                <span class="role-badge role-{{ session['user']['role'] }}">{{ session['user']['role'] | upper }}</span>
-                <span class="user-name">{{ session['user']['name'] }}</span>
-                <a href="{{ url_for('logout') }}" class="btn-logout" id="logoutBtn">Sign Out</a>
-            </div>
-            {% endif %}
         </div>
     </header>
 
     <div class="disclaimer-banner">
-        ⚠️ <strong>REGULATORY NOTICE:</strong> SCREENING RECOMMENDATION AID ONLY, NOT A DIAGNOSTIC DEVICE. Images are processed locally; uploads encrypted at rest.
+        ⚠️ <strong>REGULATORY NOTICE:</strong> CLINICAL DECISION SUPPORT SCREENING AID ONLY, NOT AN AUTONOMOUS DIAGNOSTIC DEVICE. Images processed locally with AES-GCM encryption at rest.
     </div>
 
     <main class="main-content">
@@ -50,10 +111,18 @@
 
     <footer class="app-footer">
         <div class="footer-container">
-            <p>Quantum-Enhanced Deep Learning (PennyLane 4-Qubit VQC + Frozen EfficientNet-B0) | AES-GCM Encrypted Storage</p>
-            <p class="legal-text">This system is designed strictly for tele-ophthalmology triage and prioritization under clinical supervision.</p>
+            <div class="footer-tech-stack">
+                <span>Frozen EfficientNet-B0 Backbone</span> &bull; 
+                <span>PennyLane 4-Qubit Variational Quantum Circuit</span> &bull; 
+                <span>Grad-CAM Explainability</span> &bull; 
+                <span>AES-GCM Encryption</span>
+            </div>
+            <p class="legal-text">Designed strictly for tele-ophthalmology triage, prioritization, and ocular wellness risk stratification under licensed clinician oversight.</p>
         </div>
     </footer>
+
+    <!-- Global Toast Container for Clinical Actions -->
+    <div id="toastContainer" class="toast-container"></div>
 
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
